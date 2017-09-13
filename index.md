@@ -29,7 +29,7 @@ When you provision your {{site.data.keyword.composeForRabbitMQ}} instance you ca
 
 ## Managing Compose for RabbitMQ
 
-You can manage your service from the service dashboard. Here you can find information about your Bluemix Compose database and how to connect to it. You can also manage your backups from the dashboard. For more information, see [Dashboard Overview](./dashboard-overview.html) and [Backups](./managing-backups.html).
+You can manage your service from the service dashboard. Here you can find information about your Bluemix Compose database and how to connect to it. You can also manage your backups from the dashboard and allocated more resources for your service. For more information, see [Service Overview](./dashboard-overview.html), [Backups](./dashboard-backups.html), and [Scaling Resources](./dashboard-scaling-resources.html).
 
 ## Connecting to Compose for RabbitMQ
 
