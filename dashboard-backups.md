@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017
-lastupdated: "2017-07-13"
+lastupdated: "2017-10-16"
 ---
 
 {:new_window: target="_blank"}
@@ -21,6 +21,10 @@ You can create and download backups from the *Manage* page of your service dashb
 Daily backups of your database are automatically scheduled. To view your existing backups, navigate to the *Manage* page of your service dashboard. 
 
 ![Backups](./images/rabbitmq-backups-show.png "A list of backups in the service dashboard")
+
+Click on the corresponding row to expand the options for any available backup.
+
+![Backup Options](./images/rabbitmq-backups-options.png "Options for a backup.") 
 
 ## Creating a backup on demand
 
@@ -52,3 +56,7 @@ To import the JSON backup file, you can:
 curl -i -u guest:guest -H "content-type:application/json" -X POST --data @<path_to_your_rabbitmq_backup> http://localhost:15672/api/definitions
 ```
 * use the command `rabbitmqadmin import <your_rabbitmq_backup>`.
+
+## Restoring a backup
+
+To restore a backup to a new service instance, follow the steps to view existing backups, then click in the corresponding row to expand the options for the backup you want to download. Click on the **Restore** button. A message is displayed to let you know that a restore has been initiated. The new service instance will automatically be named "rabbitmq-restore-[timestamp]", and appears on your dashboard when provisioning starts.
