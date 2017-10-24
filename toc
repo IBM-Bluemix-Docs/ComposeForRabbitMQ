@@ -11,12 +11,11 @@ Compose For RabbitMQ
 	The Service Dashboard
 		dashboard-overview.md
 		dashboard-backups.md
+		dashboard-settings.md
+		data-browser.md
 	{: .navgroup-end}
 
 	{: .navgroup id="howto"}
-	dashboard-scaling-resources.md
-	dashboard-whitelists.md	
-
 	{: .topicgroup}
 	Connecting to Compose for RabbitMQ
 		connecting-bluemix-app.md
