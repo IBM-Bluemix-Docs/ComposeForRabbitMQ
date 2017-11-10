@@ -14,7 +14,7 @@ lastupdated: "2017-06-07"
 # Connecting an external application
 {: #connecting-external-app}
 
-You can find the information you need to connect to {{site.data.keyword.composeForRabbitMQ}} on the *Overview* page of your {{site.data.keyword.composeForRabbitMQ}} service.
+You can find the information you need to connect to {{site.data.keyword.composeForRabbitMQ_full}} on the *Overview* page of your {{site.data.keyword.composeForRabbitMQ}} service.
 
 The examples here cover Node, Java, Ruby, Python and Go. You should begin by reading through the [Java and RabbitMQ](#java-and-rabbitmq) example, because this covers the concepts, how to connect and verify that your code is working as expected, and how to check you are connecting to the right host.
 
