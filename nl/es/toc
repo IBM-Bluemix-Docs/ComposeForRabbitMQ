@@ -6,11 +6,18 @@ Compose For RabbitMQ
 
 	{: .navgroup id="learn"}
 	index.md
-	credentials.md
 
-	{: .topicgroup }
-	Enlaces relacionados
-		[App Node.js de ejemplo](https://github.com/IBM-Bluemix/compose-rabbitmq-helloworld-nodejs)
-		[Ayuda de Compose](https://help.compose.com)
-		[Artículos de Compose](https://www.compose.com/articles/)
+	{: .topicgroup}
+	El panel de control del servicio
+		dashboard-overview.md
+		dashboard-backups.md
+		dashboard-settings.md
+		data-browser.md
+	{: .navgroup-end}
+
+	{: .navgroup id="howto"}
+	{: .topicgroup}
+	Conexión a Compose for RabbitMQ
+		connecting-bluemix-app.md
+		connecting-external.md
 	{: .navgroup-end}
