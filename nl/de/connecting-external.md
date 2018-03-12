@@ -1,7 +1,7 @@
 ---
 
 copyright:
-  years: 2017
+  years: 2017,2018
 lastupdated: "2017-06-07"
 ---
 
@@ -14,7 +14,7 @@ lastupdated: "2017-06-07"
 # Externe Anwendung verbinden
 {: #connecting-external-app}
 
-Sie finden die Informationen, die Sie zum Herstellen einer Verbindung zu {{site.data.keyword.composeForRabbitMQ_full}} benötigen, auf der Seite *Übersicht* Ihres {{site.data.keyword.composeForRabbitMQ}}-Service. 
+Sie finden die Informationen, die Sie zum Herstellen einer Verbindung zu {{site.data.keyword.composeForRabbitMQ_full}} benötigen, auf der Seite *Übersicht* Ihres {{site.data.keyword.composeForRabbitMQ}}-Service.
 
 Die hier aufgeführten Beispiele gelten für Node, Java, Ruby, Python und Go. Sie sollten zuerst das Beispiel [Java und RabbitMQ](#java-and-rabbitmq) lesen, weil darin beschrieben wird, welche Konzepte es gibt, wie Sie eine Verbindung herstellen und überprüfen, ob Ihr Code wie erwartet funktioniert und wie Sie überprüfen, ob Sie mit dem richtigen Host verbunden sind.
 
@@ -183,7 +183,7 @@ public class RabbitMQConnector {
 
 Dies ist nur ein Beispiel, das zeigt, dass der Code alles in der Hauptmethode macht. Zuerst ruft er eine Verbindungsfactory (ConnectionFactory) für RabbitMQ-Verbindungen ab. Dann wird der URI für die Bereitstellung an die Factory gesendet, damit er Verbindungen herstellt, die sich mit RabbitMQ verbinden. Beachten Sie den Eintrag 'amqps://' im URI. 
 
-Dann kann der Code die Factory nach einer neuen Verbindung fragen. Mithilfe dieser Verbindung kann das Programm nun eine Nachricht an einen Austausch veröffentlichen. Zuerst erstellt es einen Kanal für diese Veröffentlichung: 
+Dann kann der Code die Factory nach einer neuen Verbindung fragen. Mithilfe dieser Verbindung kann das Programm nun eine Nachricht an einen Austausch veröffentlichen. Zuerst erstellt es einen Kanal für diese Veröffentlichung:
 
 ```java
   		Channel channel = conn.createChannel();
@@ -226,7 +226,7 @@ Um zu überprüfen, ob die Nachricht angekommen ist, und weil es nicht möglich 
 + Kehren Sie auf die Registerkarte 'Austauschvorgänge' zurück. 
 + Wählen Sie den Austausch *postal* aus.
 ![Registerkarte 'Austauschvorgänge' in der Administratorbenutzerschnittstelle.](./images/exchanges_tab.png)
-* Wählen Sie **Bindungen** aus. 
+* Wählen Sie **Bindungen** aus.
 * Wählen Sie im Bereich _Bindung aus diesem Austausch hinzufügen_ die Option "zur Warteschlange" aus und geben Sie *fred* als Warteschlangenname ein.
 * Geben Sie "tributes" als Routing-Schlüssel ein.
 ![Bindung auf Registerkarte 'Austauschvorgänge' hinzufügen.](./images/add_binding.png)
@@ -274,6 +274,7 @@ W, [2015-11-03T10:45:51.476133 #24628]  WARN -- #<Bunny::Session:0x7fa6319881c0 
 certificate, connection upgrade will fail!
 ```
 Der Server ist nicht für die Überprüfung von Clients konfiguriert (und Compose bietet derzeit keine Überprüfung von Clientzertifikaten an). Trotz dieser Nachricht gelingt das Verbindungsupgrade und wird mit einem vertrauenswürdigen Zertifikat von Let's Encrypt überprüft.
+
 ## Python und RabbitMQ
 
 Dieser Code verwendet die Bibliothek [pika](http://pika.readthedocs.org/en/0.10.0/index.html), wie von den RabbitMQ-Entwicklern empfohlen.
@@ -305,6 +306,7 @@ connection.close()
 
 ```
 Der Code bindet zuerst die benötigten Bibliotheken ein. Dann erstellt er die Parameter, die zum Erstellen einer Verbindung erforderlich sind - insbesondere die RabbitMQ-URL.
+
 Der Code folgt dem Modell der obigen Beispiele und verwendet sie dann, um eine Verbindung herzustellen und mit einem Routing-Schlüssel eine Nachricht an den Austausch `postal` zu übertragen.
 
 ## Go und RabbitMQ

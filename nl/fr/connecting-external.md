@@ -1,7 +1,7 @@
 ---
 
 copyright:
-  years: 2017
+  years: 2017,2018
 lastupdated: "2017-06-07"
 ---
 
@@ -274,6 +274,7 @@ W, [2015-11-03T10:45:51.476133 #24628]  WARN -- #<Bunny::Session:0x7fa6319881c0 
 certificate, connection upgrade will fail!
 ```
 Le serveur n'est pas configuré pour vérifier les clients (et Compose ne propose pas actuellement de vérification des certificats client), mais malgré ce message, la mise à niveau de la connexion réussit et elle est vérifiée avec un certificat Lets Encrypt digne de confiance.
+
 ## Python et RabbitMQ
 
 Ce code utilise la bibliothèque [pika](http://pika.readthedocs.org/en/0.10.0/index.html), selon recommandation des développeurs RabbitMQ.

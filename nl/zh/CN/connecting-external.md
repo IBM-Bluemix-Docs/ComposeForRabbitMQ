@@ -1,7 +1,7 @@
 ---
 
 copyright:
-  years: 2017
+  years: 2017,2018
 lastupdated: "2017-06-07"
 ---
 
@@ -275,6 +275,8 @@ certificate, connection upgrade will fail!
 ```
 服务器未配置为验证客户机（并且 Compose 当前未提供客户机证书验证）; 不管此消息为何，连接升级都将成功，并通过可信的 Lets Encrypt 证书进行验证。
 
+
+
 ## Python 和 RabbitMQ
 
 此代码使用 RabbitMQ 开发者建议的 [pika](http://pika.readthedocs.org/en/0.10.0/index.html) 库。
@@ -306,6 +308,8 @@ connection.close()
 
 ```
 代码首先会拉入它需要的库。然后，它将建立创建连接所需的参数 - 具体来说是 RabbitMQ URL。
+
+
 
 按照先前示例的模型，代码随后会使用该模型，将消息连接并发布到具有路由键的 `postal` 交换器。
 

@@ -1,8 +1,8 @@
 ---
 
-Copyright:
-  Years: 2016,2017
-lastupdated: "2017-10-16"
+copyright:
+  years: 2016,2018
+lastupdated: "2017-06-16"
 ---
 
 {:new_window: target="_blank"}

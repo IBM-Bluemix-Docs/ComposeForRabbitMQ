@@ -1,8 +1,8 @@
 ---
 
 Copyright:
-  Years: 2017
-lastupdated: "2017-10-23"
+  years: 2017,2018
+lastupdated: "2017-11-20"
 ---
 
 {:new_window: target="_blank"}
@@ -32,11 +32,9 @@ Se o seu serviço precisa de memória adicional, ou você deseja reduzir a quant
 2. Na área de janela _Detalhes da implementação_, clique em **Escalar recursos**. A página Escalar recursos é aberta.
     ![The Scale Resources page](./images/rabbitmq-scale-show.png "The Scale Resources page")
 3. Ajuste a régua de controle para aumentar ou reduzir a memória alocada para o serviço {{site.data.keyword.composeForRabbitMQ}}. Mova a régua de controle para a esquerda para reduzir a quantia de memória ou mova-a para a direita para aumentar a memória.
-4. Clique em **Escalar implementação** para acionar o novo ajuste de escala e retorne para a visão geral do painel. A área de janela _Detalhes da implementação_ contém detalhes da tarefa de novo ajuste de escala que está agora em andamento:
+4. Clique em **Escalar implementação** para acionar o novo ajuste de escala e retorne para a visão geral do painel. 
 
-    ![A área de janela Detalhes da implementação, mostrando uma tarefa em execução](./images/jobs_scaling.png "A área de janela Detalhes da implementação, mostrando uma tarefa em execução: escalando o banco de dados para 2 unidades")
-
-    Quando o ajuste de escala for concluído, a área de janela _Detalhes da implementação_ será atualizada para mostrar o uso atual e o novo valor para a memória disponível.
+Quando o ajuste de escala for concluído, a área de janela _Detalhes da implementação_ será atualizada para mostrar o uso atual e o novo valor para a memória disponível.
 
 
 ## Mudar senha
@@ -47,7 +45,9 @@ Uma nova senha gerada aleatoriamente aparecerá ou será possível digitar sua p
   
 ![Updating the RabbitMQ password](./images/rabbitmq-update-password.png "The automatic password generator")
 
-As mudanças entram em vigor quando você clica no botão **Atualizar senha**. Isso mudará as credenciais que você e seus serviços usam para se conectar e faz parte da sequência de conexões de seu serviço. A área de janela _Detalhes da implementação_ mostrará o progresso da tarefa em execução. 
+Clique em **Atualizar senha**. Será solicitado que você confirme a mudança. Clique em **Atualizar senha** no diálogo para confirmar a nova senha ou cancele para cancelar a mudança. A área de janela _Detalhes da implementação_ mostrará o progresso da tarefa em execução.
+
+**Nota:** a troca da senha muda as credenciais que você e os seus serviços usam para se conectar e invalida a sequência de conexões do seu serviço. Ela também pode resultar em tempo de inatividade.
 
 ### Atualizando aplicativos conectados
 Mudar a senha invalidará a sequência de conexões existente e gerar uma nova. Isso causará uma interrupção de serviço até que aplicativos conectados sejam atualizados com a nova sequência de conexões. Você precisará fazer isso fornecendo a nova sequência de conexões para seus aplicativos.

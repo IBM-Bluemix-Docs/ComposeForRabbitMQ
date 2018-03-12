@@ -1,7 +1,7 @@
 ---
 
 copyright:
-  years: 2017
+  years: 2017,2018
 lastupdated: "2017-06-07"
 ---
 
@@ -275,6 +275,8 @@ certificate, connection upgrade will fail!
 ```
 伺服器未配置為驗證用戶端（而且 Compose 目前不提供用戶端憑證驗證）；儘管有此訊息，但連線升級將成功，並使用信任的 Lets Encrypt 憑證進行驗證。
 
+
+
 ## Python 及 RabbitMQ
 
 此程式碼會依照 RabbitMQ 開發人員的建議使用 [pika](http://pika.readthedocs.org/en/0.10.0/index.html) 程式庫。
@@ -306,6 +308,8 @@ connection.close()
 
 ```
 程式碼首先會在程式庫中取回其所需的一切。然後，建立必要參數來建立連線 - 尤其是 RabbitMQ URL。
+
+
 
 遵循先前範例的模型，它接著會使用該模型來連接，並利用遞送鍵張貼訊息至 `postal` 交換。
 

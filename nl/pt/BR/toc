@@ -6,10 +6,12 @@ Compose For RabbitMQ
 
 	{: .navgroup id="learn"}
 	index.md
+	getting_started.md
+	pricing.md
 
 	{: .topicgroup}
-	O Painel de serviço
-	  	dashboard-overview.md
+	O Painel de serviço   		
+		dashboard-overview.md
 		dashboard-backups.md
 		dashboard-settings.md
 		data-browser.md

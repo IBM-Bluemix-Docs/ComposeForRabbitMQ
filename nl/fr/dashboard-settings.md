@@ -1,8 +1,8 @@
 ---
 
 Copyright:
-  Years: 2017
-lastupdated: "2017-10-23"
+  years: 2017,2018
+lastupdated: "2017-11-20"
 ---
 
 {:new_window: target="_blank"}
@@ -32,11 +32,9 @@ Si votre service a besoin de plus de mémoire, ou si vous voulez limiter la quan
 2. Dans le panneau _Deployment Details_, cliquez sur **Scale Resources**. La page Scale Resources s'ouvre.
     ![Page Scale Resources](./images/rabbitmq-scale-show.png "Page Scale Resources")
 3. Déplacez le curseur sur la règle pour augmenter ou diminuer la quantité de mémoire allouée au service {{site.data.keyword.composeForRabbitMQ}}. Déplacez-le vers la gauche pour diminuer la quantité de mémoire ou vers la droite pour l'augmenter.
-4. Cliquez sur **Scale Deployment** pour lancer le processus de mise à l'échelle et revenir dans la vue d'ensemble du tableau de bord. Le panneau _Deployment Details_ contient les détails de la mise à l'échelle en cours de progression :
+4. Cliquez sur **Scale Deployment** pour lancer le processus de mise à l'échelle et revenir dans la vue d'ensemble du tableau de bord. 
 
-    ![Panneau Deployment Details affichant un travail en cours](./images/jobs_scaling.png "Panneau Deployment Details affichant un travail en cours : mise à l'échelle de la base de données de 2 unités")
-
-    Une fois la mise à l'échelle terminée, le panneau _Deployment Details_ est actualisé pour afficher l'utilisation actuelle et la nouvelle valeur de la mémoire disponible.
+Une fois la mise à l'échelle terminée, le panneau _Deployment Details_ est actualisé pour afficher l'utilisation actuelle et la nouvelle valeur de la mémoire disponible.
 
 
 ## Modification du mot de passe
@@ -47,7 +45,9 @@ Un nouveau mot de passe aléatoire est généré ou vous pouvez entrer votre pro
   
 ![Mise à jour du mot de passe RabbitMQ](./images/rabbitmq-update-password.png "Générateur de mot de passe automatique")
 
-Les modifications prennent effet lorsque vous cliquez sur le bouton **Mettre à jour le mot de passe**. Cette opération modifie les données d'identification que vous utilisez ainsi que vos services pour vous connecter et qui font partie de la chaîne de connexion de votre service. Le panneau _Deployment Details_ affiche la progression de l'exécution du travail. 
+Cliquez sur **Mise à jour du mot de passe**. Un message vous demande de confirmer la modification. Cliquez sur **Mise à jour du mot de passe** dans la boîte de dialogue pour confirmer le nouveau mot de passe ou sur Annuler pour annuler la modification. Le panneau _Deployment Details_ affiche la progression de l'exécution du travail.
+
+**Remarque :** Cette opération modifie les données d'identification que vous utilisez ainsi que vos services pour vous connecter et invalide la chaîne de connexion de votre service. Elle peut également entraîner un temps d'indisponibilité.
 
 ### Mise à jour des applications connectées
 La modification du mot de passe invalide la chaîne de connexion existante et en génère une nouvelle. Cela provoque une interruption du service jusqu'à ce que les applications connectées soient mises à jour avec la nouvelle chaîne de connexion. Vous devrez effectuer cette opération en fournissant la nouvelle chaîne de connexion à toutes vos applications.
