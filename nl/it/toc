@@ -1,0 +1,25 @@
+{:navgroup: .navgroup}
+{:topicgroup: .topicgroup}
+
+{: .toc subcollection="compose-for-rabbitmq" audience="service" href="/docs/services/ComposeForRabbitMQ/getting_started.html"}
+Compose For RabbitMQ
+
+	{: .navgroup id="learn"}
+	getting_started.md
+	index.md
+	pricing.md
+
+	{: .topicgroup}
+	Il dashboard del servizio
+		dashboard-overview.md
+		dashboard-backups.md
+		dashboard-settings.md
+		data-browser.md
+	{: .navgroup-end}
+
+	{: .navgroup id="howto"}
+	{: .topicgroup}
+	Connessione a Compose for RabbitMQ
+		connecting-bluemix-app.md
+		connecting-external.md
+	{: .navgroup-end}
