@@ -26,14 +26,13 @@ Download the sample app and follow the instructions in the readme file. Then, in
 Field Name|Description
 ----------|-----------
 `uri`|The URI to be used when connecting to the service. Includes the schema (`amqps:), admin user name and password, host name of server, port number to connect to and vhost name.
-`uri_direct_1`|An alternate URI that can be used when connecting to the service. Formatted as per `uri`.
+`uri_direct_1`|A secondary URI that can be used when connecting to the service. The format is the same as `uri`.
 `uri_admin`|A URI that should be visited in a browser to access the database's administration interface. Access requires the admin user name and password from the `uri` field.
 `uri_admin_1`|An alternative administration URI - see `uri_admin`.
-`uri_admin_2`|An alternative administration URI - see `uri_admin`.
-`uri_admin_3`|An alternative administration URI - see `uri_admin`.
-`uri_admin_4`|An alternative administration URI - see `uri_admin`.
-`ca_certificate_base64`|A self-signed certificate that is used to confirm that an application is connecting to the appropriate server. This is base64 encoded. You need to decode the key before using it, as shown in the sample application.
+`ca_certificate_base64` `(optional)`|A base64 encoded, self-signed certificate that is used to confirm that an application is connecting to the appropriate server. The certificate is only present on services that have a self-signed instead of a Let's Encrypt certificate. You need to decode the key before you can use it, as shown in the sample application.
 `deployment_id`|An internal identifier for the service as created within Compose.
 `db_type`|The type of database that is offered by the service; in this case `rabbitmq`.
 `name`|The database deployment name.
 {: caption="Table 1. Compose for RabbitMQ credentials" caption-side="top"}
+
+**Note:** Two `haproxy` portals provide access to the RabbitMQ service. Both `uri` and `uri_direct_1` can be used to connect. In your applications, switch between `uri` and `uri_direct_1` to manage responses to connection failures.
