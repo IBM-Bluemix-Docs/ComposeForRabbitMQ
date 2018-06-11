@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016,2018
-lastupdated: "2017-10-23"
+lastupdated: "2018-03-27"
 ---
 
 {:new_window: target="_blank"}
@@ -19,7 +19,7 @@ RabbitMQ gestisce in modo asincrono i messaggi tra le tue applicazioni e i datab
 
 **Nota:** tutte le istanze del servizio Compose di cui è stato eseguito il provisioning prima del 14 settembre 2016 che sono ancora attive e che possono ancora essere utilizzate a cui si può fare direttamente accesso da [https://www.compose.com/](https://www.compose.com). È possibile accedere direttamente a tutte le istanze del servizio Compose di cui è stato eseguito il provisioning da questo punto in avanti ed è possibile utilizzarle nel tuo account {{site.data.keyword.cloud}}.
 
-## Creazione di un'istanza del servizio {{site.data.keyword.composeForRabbitMQ}}
+## Creazione di una istanza del servizio {{site.data.keyword.composeForRabbitMQ}}
 
 Puoi creare un servizio {{site.data.keyword.composeForRabbitMQ}} dalla pagina [{{site.data.keyword.composeForRabbitMQ}}](https://console.{DomainName}/catalog/services/compose-for-rabbitmq/) nel catalogo {{site.data.keyword.cloud_notm}}.
 
@@ -34,7 +34,11 @@ Puoi gestire il tuo servizio dal dashboard del servizio. Qui puoi trovare le inf
 - assegnare ulteriori risorse al tuo servizio 
 - modificare la password del servizio
 - utilizzare le whitelist per limitare l'accesso ai tuoi database 
+
 Per ulteriori informazioni, consulta [Impostazioni](./dashboard-settings.html).
+
+{{site.data.keyword.composeRabbitMQ}} si basa sui ruoli Cloud Foundry per gestire l'accesso al servizio. Solo gli utenti con il ruolo di sviluppatore possono visualizzare o utilizzare il dashboard del servizio. Per ulteriori informazioni sui ruoli Cloud Foundry, consulta le pagine [Cloud Foundry access](https://console.bluemix.net/docs/iam/cfaccess.html#cfaccess) e [Managing Cloud Foundry access](https://console.bluemix.net/docs/iam/mngcf.html#mngcf).
+{: .tip}
 
 ## Connessione a {{site.data.keyword.composeForRabbitMQ}}
 

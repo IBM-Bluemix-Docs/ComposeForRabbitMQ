@@ -1,12 +1,12 @@
 {:navgroup: .navgroup}
 {:topicgroup: .topicgroup}
 
-{: .toc subcollection="compose-for-rabbitmq" audience="service" href="/docs/services/ComposeForRabbitMQ/getting_started.html"}
+{: .toc subcollection="compose-for-rabbitmq" audience="service" href="/docs/services/ComposeForRabbitMQ/index.html"}
 Compose For RabbitMQ
 
 	{: .navgroup id="learn"}
-	getting_started.md
 	index.md
+	getting_started.md
 	pricing.md
 
 	{: .topicgroup}

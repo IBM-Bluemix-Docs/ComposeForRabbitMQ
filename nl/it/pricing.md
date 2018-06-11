@@ -15,15 +15,15 @@ lastupdated: "2018-01-03"
 {: #pricing}
 
 ## Configurazione di base
-Un servizio {{site.data.keyword.composeForRabbitMQ_full}} viene fornito come un cluster con due nodi di dati, ognuno che contiene 256MB di memoria e 256MB di archiviazione, che equivale a 1 unità di risorse. Il servizio _include_ la replica e l'elevata disponibilità, per cui ogni unità e il prezzo per unità _include_ il costo delle risorse in entrambi i nodi. 
+Un servizio {{site.data.keyword.composeForRabbitMQ_full}} viene fornito come un cluster con due nodi di dati, ognuno che contiene 256MB di memoria e 256MB di archiviazione, che equivale a 1 unità di risorse. Il servizio _include_ la replica e l'elevata disponibilità, per cui ogni unità e il prezzo per unità _include_ il costo delle risorse in entrambi i nodi.
 
-La configurazione di base include anche i due portali HAProxy. Ognuno dei due portali HAProxy ha 64MB di memoria. 
+La configurazione di base include anche i due portali HAProxy. Ognuno dei due portali HAProxy ha 64MB di memoria.
 
 ### Costo
 La configurazione del servizio di base a un prezzo fissato. Consulta i tile del catalogo {{site.data.keyword.cloud_notm}} per i prezzi di base nella tua valuta locale. Ad esempio, il prezzo di base in dollari US è $19.50/mese.
 
 ## Opzioni di espansione
-Se hai bisogno di ulteriore archiviazione o memoria per il tuo servizio, puoi aumentare le risorse assegnate in un rapporto 1:1 di archiviazione del disco per unità di memoria. L'aumento del disco assegnato alla distribuzione aumenterà anche la RAM assegnata. Un'unità {{site.data.keyword.composeForRabbitMQ}} è composta da 256MB di archiviazione e 256MB di memoria e ogni unità e prezzo per unità _include_ il costo di incremento delle risorse su entrambi i nodi. 
+Se hai bisogno di ulteriore archiviazione o memoria per il tuo servizio, puoi aumentare le risorse assegnate in un rapporto 1:1 di archiviazione del disco per unità di memoria. L'aumento del disco assegnato alla distribuzione aumenterà anche la RAM assegnata. Un'unità {{site.data.keyword.composeForRabbitMQ}} è composta da 256MB di archiviazione e 256MB di memoria e ogni unità e prezzo per unità _include_ il costo di incremento delle risorse su entrambi i nodi.
 
 ### Costo
 Ogni unità aggiuntiva (256MB di archiviazione/256MB di memoria) ha un prezzo per unità, che viene elencato nella tua valuta corrente nel tile del catalogo {{site.data.keyword.cloud_notm}} per il servizio. In dollari US ogni unità aggiuntiva costa $19.50. Quando la dimensione _totale_ di tutti i tuoi servizi {{site.data.keyword.composeForRabbitMQ}} aumenta, il prezzo per unità diminuisce, come mostrato nella seguente tabella dei prezzi a livelli.
@@ -31,7 +31,7 @@ Ogni unità aggiuntiva (256MB di archiviazione/256MB di memoria) ha un prezzo pe
 ### Prezzi a livelli
 Numero di unità|Prezzo per unità
 ----------|-----------
-1 - 9 unità|prezzo per unità di base -- $19.50 USD/Unità 
+1 - 9 unità|prezzo per unità di base -- $19.50 USD/Unità
 10 - 24 unità|10% di riduzione -- $17.55 USD/Unità
 25 - 49 unità|20% di riduzione -- $15.60 USD/Unità
 50 - 99 unità|30% di riduzione -- $13.65 USD/Unità
