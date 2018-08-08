@@ -16,7 +16,7 @@ lastupdated: "2018-06-13"
 
 {{site.data.keyword.composeForRabbitMQ_full}} database connections are managed by 2 HAProxy portals. Each portal has 64MB of memory.
 
-The two portals to allow for applications to maintain connectivity should one of the portals become unreachable. Failover at the client side is the responsibility of the application designer. Some etcd drivers handle multiple connection strings and graceful failover automatically. Unless working with a driver which completely handles failover errors you should:
+The two portals to allow for applications to maintain connectivity should one of the portals become unreachable. Failover at the client side is the responsibility of the application designer. Unless working with a driver that completely handles failover errors you should:
 
 * Work with a driver that accepts multiple endpoints in its connection configuration.
 * Ensure your applications calls to read or write to the database react to errors appropriately. Options include:
