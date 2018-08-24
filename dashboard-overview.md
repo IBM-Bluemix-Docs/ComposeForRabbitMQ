@@ -31,7 +31,7 @@ An internal identifier for the service.
 
 ### Usage
 
-The size of your database and the amount of storage provided by your service plan.
+The size of your database and the amount of storage that is provided by your service plan.
 
 ## Current Jobs
 
@@ -43,13 +43,13 @@ You'll find each Connection String for your service in a different tab in the _C
 
 ### HTTPS
 
-The **HTTPS** connection string can be used by some client libraries and contains all the information needed for other libraries to connect. You can find out how to use the connection string to connect in [Connecting an external application](./connecting-external.html).
+The **HTTPS** connection string can be used by some client libraries and contains all the information that is needed for other libraries to connect. You can find out how to use the connection string to connect in [Connecting an external application](./connecting-external.html).
 
-All Compose RabbitMQ deployments only accept `amqps://` TLS secured connections which are backed up with a self-signed certificate on the server.
+All Compose RabbitMQ deployments only accept `amqps://` TLS secured connections, which are backed up with a self-signed certificate on the server.
 
 ### Admin
 
-The link on the **Admin** tab will open the _RabbitMQ Managment_ page. The login information is in the **HTTPS** connection string following the 'amqps://' and before the '@'.
+Click the link on the **Admin** tab to open the _RabbitMQ Management_ page. The login information is in the **HTTPS** connection string following `amqps://` and before the `@`.
 
 ## Instance Administration API
 
@@ -57,7 +57,7 @@ You can manage your {{site.data.keyword.composeForRabbitMQ}} service through the
 
 ### Foundation Endpoint
 
-The foundation endpoint is composed of the region the service resides in and the service instance id. It will be at the start of every endpoint.
+The foundation endpoint is composed of the region the service resides in and the service instance ID. It is at the start of every endpoint.
 
 ### Deployment ID
 
@@ -65,5 +65,5 @@ The deployment ID is necessary for most calls, and identifies the specific deplo
 
 ### Reference
 
-For more documentation and reference for using the {{site.data.keyword.cloud_notm}} Compose API, across all {{site.data.keyword.cloud_notm}} Compose services, read [The {{site.data.keyword.cloud_notm}} Compose API](https://www.compose.com/articles/the-ibm-cloud-compose-api/).
+For more information about using the {{site.data.keyword.cloud_notm}} Compose API, across all {{site.data.keyword.cloud_notm}} Compose services, see [The {{site.data.keyword.cloud_notm}} Compose API](https://www.compose.com/articles/the-ibm-cloud-compose-api/).
 

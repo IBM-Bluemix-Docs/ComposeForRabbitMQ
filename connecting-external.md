@@ -14,9 +14,9 @@ lastupdated: "2017-06-07"
 # Connecting an external application
 {: #connecting-external-app}
 
-You can find the information you need to connect to {{site.data.keyword.composeForRabbitMQ_full}} on the *Overview* page of your {{site.data.keyword.composeForRabbitMQ}} service.
+You can find the information that you need to connect to {{site.data.keyword.composeForRabbitMQ_full}} on the *Overview* page of your {{site.data.keyword.composeForRabbitMQ}} service.
 
-The examples here cover Node, Java, Ruby, Python and Go. You should begin by reading through the [Java and RabbitMQ](#java-and-rabbitmq) example, because this covers the concepts, how to connect and verify that your code is working as expected, and how to check you are connecting to the right host.
+The examples here cover Node, Java, Ruby, Python, and Go. Begin by reading through the [Java and RabbitMQ](#java-and-rabbitmq) example, because this covers the concepts, how to connect and verify that your code is working as expected, and how to check that you are connecting to the right host.
 
 You can find the full code for this and subsequent examples at [github.com/compose-ex/rabbitmqconns](https://github.com/compose-ex/rabbitmqconns).</p></div>
 
@@ -101,7 +101,7 @@ amqp.connect(rabbitmqurl, { servername: parsedurl.hostname }, function(err, conn
     if (err !== null) return bail(err, conn);
 ```
 
-Start by defining a variable with the connection string URL from the Compose console's overview. Currently the amqp library does not send a server name for the TLS/SSL SNI support to function, but you can parse the URL into its component parts and add `{ servername: parsedurl.hostname }` to the `amqp.connect` options to inject that property into the connection. When the connection is complete the callback function is invoked and makes an initial error check.
+Start by defining a variable with the connection string URL from the Compose console's overview. Currently, the amqp library does not send a server name for the TLS/SSL SNI support to function, but you can parse the URL into its component parts and add `{ servername: parsedurl.hostname }` to the `amqp.connect` options to inject that property into the connection. When the connection is complete the callback function is invoked and makes an initial error check.
 
 Using the connection, the program can now publish a simple message to an exchange. First, it makes a channel for this publication. The code continues in a callback function:
 
@@ -113,7 +113,7 @@ Using the connection, the program can now publish a simple message to an exchang
         var exchangeName = "postal";
 ```
 
-The code checks for errors. If successful, it creates variables representing the message, routing key and exchange name to send to. `exchangeName` is used to ensure the named exchange exists. The `assertExchange` function is called with the name, type, options and a callback function. Providing the exchange exists or can be created the code moves on:
+The code checks for errors. If successful, it creates variables representing the message, routing key, and exchange name to send to, using `exchangeName` to ensure that the named exchange exists. The `assertExchange` function is called with the name, type, options, and a callback function. Providing the exchange exists or can be created the code moves on:
 
 ```javascript
 				channel.assertExchange(exchangeName, "direct", {
@@ -161,7 +161,7 @@ amqp.connect(rabbitmqurl, { servername: parsedurl.hostname }).then(function(conn
 }).catch(console.warn);
 ```
 
-The flow is pretty much the same, but the promises ensure things happen in a more manageable order. 
+The flow is much the same, but the promises ensure that things happen in a more manageable order. 
 
 If you run either of these, skip forward to [Verifying the example connection](#section-verifying-the-example-connection) to confirm it does what we expect.
 
@@ -185,7 +185,7 @@ public class RabbitMQConnector {
       Connection conn = factory.newConnection();
 ```
 
-This is just an example, so the code is doing everything in the main method. It begins with getting a ConnectionFactory for RabbitMQ connections. The URI for the deployment is then sent the factory so that it makes connections that connect to RabbitMQ; note the amqps:// in the URI. 
+This is just an example, so the code is doing everything in the main method. It begins with getting a ConnectionFactory for RabbitMQ connections. The URI for the deployment is then sent the factory so that it makes connections that connect to RabbitMQ. Note the `amqps://` in the URI. 
 
 The code can then ask the factory for a new connection. Using that connection, the program can now publish a simple message to an exchange. First, it makes a channel for this publication:
 
@@ -199,14 +199,14 @@ The code can then ask the factory for a new connection. Using that connection, t
 
 It then sets up a message payload, in this case a string, a routing key for its onward journey and the name of an exchange to send it on to.
 
-With the new values set, it can declare the exchange (a direct exchange which can make use of the routing key), which will be created if it doesn't exist. It can then publish to the named exchange, with a routing key and the message payload encoded as bytes:
+With the new values set, it can declare the exchange (a direct exchange that can use the routing key), which will be created if it doesn't exist. It can then publish to the named exchange, with a routing key and the message payload encoded as bytes:
 
 ```java
             channel.exchangeDeclare(exchangeName,"direct",true);
             channel.basicPublish(exchangeName, routingKey, null, message.getBytes());
 ```
 
-All the code has to do now is close the channel, close the connection and put in a catch for all the exceptions that may be thrown:
+All the code must do now is close the channel, close the connection and put in a catch for all the exceptions that can be thrown:
 
 ```java
   		channel.close();
@@ -220,7 +220,7 @@ All the code has to do now is close the channel, close the connection and put in
 
 ## Verifying the example connection
 
-When you run the examples here. the code silently connects, delivers the message, and disconnects. To verify that it did something, log into the RabbitMQ Admin UI –  the URL is displayed below the connections strings in the Compose console – and select the Exchanges tab. There should be a "postal" exchange there, which the code created. There should also be some activity shown in the charts. 
+When you run the examples here, the code silently connects, delivers the message, and disconnects. To verify that it did something, log in to the RabbitMQ Admin UI – the URL is displayed after the connections strings in the Compose console – and select the Exchanges tab. You should find a "postal" exchange there, which the code created. There should also be some activity in the charts. 
 
 To confirm that the message arrived, and because it is not possible to look into the exchange, create a queue to consume the message.
 
@@ -244,13 +244,13 @@ To confirm that the message arrived, and because it is not possible to look into
 * Click **Get Message** to display the message
 ![Results of Get Message.](./images/get_message_results.png)
 
-Any messages sent before a queue was bound to the exchange are discarded automatically as they could not be routed. RabbitMQ has a mechanism to catch unroutable messages called [Alternate Exchanges](https://www.rabbitmq.com/ae.html) for special cases, but it is generally best to ensure everything is routed in the messaging architecture.
+Any messages sent before a queue was bound to the exchange are discarded automatically as they could not be routed. RabbitMQ has a mechanism to catch unroutable messages, called [Alternate Exchanges](https://www.rabbitmq.com/ae.html) for special cases, but it is generally best to ensure that everything is routed in the messaging architecture.
 
-In this case, the message stays in the queue even though getting a message is a destructive act. This is because, on the _Get Messages_ panel, the default setting is to re-queue the messages after they are retrieved.
+In this case, the message stays in the queue even though getting a message is a destructive act. This is because, on the _Get Messages_ panel, the default setting is to requeue the messages after they are retrieved.
 
 ## Ruby and RabbitMQ
 
-There are a number of drivers for the Ruby language. [Bunny](http://rubybunny.info/) is one of the best known of them - you can find full tutorials and documentation on the [Bunny](http://rubybunny.info/) web site. As of writing, Bunny 2.7.0 has not been released; this contains a patch to use SNI when making the TLS connection. You can build this for yourself using `gem install specific_install ` then `gem specific_install https://github.com/ruby-amqp/bunny`.
+There are a number of drivers for the Ruby language. [Bunny](http://rubybunny.info/) is one of the best known of them - you can find full tutorials and documentation on the [Bunny](http://rubybunny.info/) website. As of writing, Bunny 2.7.0 has not been released; this contains a patch to use SNI when making the TLS connection. You can build this for yourself using `gem install specific_install ` then `gem specific_install https://github.com/ruby-amqp/bunny`.
 
 To connect to Compose RabbitMQ and to do the same as the example above, use the following code:
 ```ruby
@@ -309,13 +309,13 @@ channel.close()
 connection.close()
 
 ```
-The code first pulls in the libraries it needs. It then creates the parameters needed to create a connection - specifically the RabbitMQ URL.
+The code first pulls in the libraries it needs. It then creates the parameters that are needed to create a connection - specifically the RabbitMQ URL.
 
 Following the model of the previous examples, it then uses that to connect and posts a message to the `postal` exchange with a routing key.
 
 ## Go and RabbitMQ
 
-For Go we recommend the [github.com/streadway/amqp](https://github.com/streadway/amqp) package. 
+For Go, we recommend the [github.com/streadway/amqp](https://github.com/streadway/amqp) package. 
 
 In this Go example, the code only makes a server verified connection. 
 ```go
@@ -348,7 +348,7 @@ The main method starts by creating the connection. The RabbitMQ password is pass
 
 Using  `defer` ensures that the connection is closed when exiting.
 
-The rest of the Go code, as with previous examples, opens a channel, creates the exchange and sends a message.
+The rest of the Go code, as with previous examples, opens a channel, creates the exchange, and sends a message.
 
 ```go
 	message := "This is not a message, this is a go tribute to a message"

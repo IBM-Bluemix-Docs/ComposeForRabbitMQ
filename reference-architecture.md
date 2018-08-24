@@ -34,4 +34,4 @@ Resources are scaled automatically based on the total memory use of the RabbitMQ
 Auto-scaling is designed to respond to the short-to-medium term trends of your database. Every minute, your service is checked and if it is running short on RAM, then more units are allocated to the deployment. 
 
 Auto-scaling does not scale down deployments where disk/memory usage has shrunk. The resources provisioned to your databases remain for your future needs, or until you scale down your deployment manually.
-{: .tip}
+{: tip}

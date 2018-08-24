@@ -23,7 +23,7 @@ Deployable Versions| Preferred Version
 
 ## Preferred Version
 
-The preferred version is typically the newest version of RabbitMQ that is available for {{site.data.keyword.composeForRabbitMQ}}. It is the version that is the default in the drop-down version selector on the catalog page. It is also the version that is automatically provisioned by API if no version is specified in the call.
+The preferred version is typically the newest version of RabbitMQ that is available for {{site.data.keyword.composeForRabbitMQ}}. It is the default version in the drop-down selector on the catalog page. It is also the version that is automatically provisioned by API if no version is specified in the call.
 
 ### New Preferred Version Protocol
 
@@ -31,5 +31,4 @@ When a new version is made available, its release is announced and it is availab
 
 The list of versions available for provisions is on the {{site.data.keyword.composeForRabbitMQ}} [catalog page](https://console.{DomainName}/catalog/services/compose-for-rabbitmq).
 
-To get a current list of available versions for your {{site.data.keyword.composeForRedis}} service you can use the 
-[GET /2016-07/deployments/:id/versions](https://apidocs.compose.com/v1.0/reference#2016-07-get-deployments-versions) endpoint.
+To get a current list of available versions for your {{site.data.keyword.composeForRabbitMQ}} service, you can use the [GET /2016-07/deployments/:id/versions] (https://apidocs.compose.com/v1.0/reference#2016-07-get-deployments-versions) endpoint.

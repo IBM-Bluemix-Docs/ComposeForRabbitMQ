@@ -23,7 +23,7 @@ Make sure you have an [{{site.data.keyword.cloud_notm}} account][ibm_cloud_signu
 
 You'll also need to install [Node.js](https://nodejs.org/) and [Git](https://git-scm.com/downloads).
 
-## Step 1: Create a {{site.data.keyword.composeForRabbitMQ}} service instance
+## Step 1. Create a {{site.data.keyword.composeForRabbitMQ}} service instance
 {: #create-service}
 
 You can create a {{site.data.keyword.composeForRabbitMQ}} service from the [{{site.data.keyword.composeForRabbitMQ}} page](https://console.{DomainName}/catalog/services/compose-for-rabbitmq/) in the {{site.data.keyword.cloud_notm}} catalog.
@@ -35,9 +35,9 @@ Next, choose a pricing plan for your service. You can choose the *Standard* or *
 Click **Create** to provision your service. Provisioning can take a while to complete. You can check on the progress by going to the _Manage_ view for the service.
 
 You won't be able to connect an application to the service until provisioning has completed.
-{: .tip}
+{: tip}
 
-## Step 2: Clone the Hello World sample app from Github
+## Step 2. Clone the Hello World sample app from Github
 
 Clone the Hello World app to your local environment from your terminal using the following command:
 
@@ -45,7 +45,7 @@ Clone the Hello World app to your local environment from your terminal using the
 git clone https://github.com/IBM-Cloud/compose-rabbitmq-helloworld-nodejs.git
 ```
 
-## Step 3: Install the app dependencies
+## Step 3. Install the app dependencies
 
 Use npm to install dependencies.
 
@@ -61,11 +61,11 @@ Use npm to install dependencies.
   npm install
   ```
 
-## Step 4: Download and install the {{site.data.keyword.cloud_notm}} CLI tool
+## Step 4. Download and install the {{site.data.keyword.cloud_notm}} CLI tool
 
 The {{site.data.keyword.cloud_notm}} CLI tool tool is what you'll use to communicate with {{site.data.keyword.cloud_notm}} from your terminal or command line. For details, see [Download and install {{site.data.keyword.cloud_notm}} CLI](https://console.{DomainName}/docs/cli/reference/bluemix_cli/download_cli.html).
 
-## Step 5: Connect to {{site.data.keyword.cloud_notm}}
+## Step 5. Connect to {{site.data.keyword.cloud_notm}}
 
 1. Connect to {{site.data.keyword.cloud_notm}} in the command line tool and follow the prompts to log in.
 
@@ -74,7 +74,7 @@ The {{site.data.keyword.cloud_notm}} CLI tool tool is what you'll use to communi
   ```
 
   If you have a federated user ID, use the `ibmcloud login --sso` command to log in with your single sign on ID. See [Logging in with a federated ID](https://console.{DomainName}/docs/cli/login_federated_id.html#federated_id) to learn more.
-  {: .tip}
+  {: tip}
 
 2. Make sure you are targetting the correct {{site.data.keyword.cloud_notm}} org and space.
 
@@ -84,7 +84,7 @@ The {{site.data.keyword.cloud_notm}} CLI tool tool is what you'll use to communi
 
   Choose from the options provided, using the same values you used when you created the service.
 
-## Step 6: Update the app's manifest file
+## Step 6. Update the app's manifest file
 {: #update-manifest}
 
 {{site.data.keyword.cloud_notm}} uses a manifest file - `manifest.yml` to associate an application with a service. Follow these steps to create your manifest file.
@@ -105,10 +105,10 @@ The {{site.data.keyword.cloud_notm}} CLI tool tool is what you'll use to communi
 3. Change the `name` value. The value you choose will be the name of the app as it appears in your {{site.data.keyword.cloud_notm}} dashboard.
 4. Update the `services` value to match the name of the service you created in [Create a {{site.data.keyword.composeForRabbitMQ}} service instance](#create-service). 
 
-## Step 7: Push the app to {{site.data.keyword.cloud_notm}}.
+## Step 7. Push the app to {{site.data.keyword.cloud_notm}}.
 
 This step will fail if the service has not finished provisioning from Step 1. You can check its progress by going to the _Manage_ view for the service.
-{: .tip}
+{: tip}
 
 When you push the app it will automatically be bound to the service specified in the manifest file.
 
@@ -116,14 +116,14 @@ When you push the app it will automatically be bound to the service specified in
 bx cf push
 ```
 
-## Step 8: Check the app is connected to your {{site.data.keyword.composeForRabbitMQ}} service
+## Step 8. Check the app is connected to your {{site.data.keyword.composeForRabbitMQ}} service
 
 1. Navigate to your {{site.data.keyword.composeForRabbitMQ}} service dashboard
 2. Select _Connections_ from the dashboard menu. Your application should be listed under _Connected Applications_.
 
 If your application is not listed, repeat Steps 7 ad 8, making sure you have entered the correct details in [manifest.yml](#update-manifest).
 
-## Step 9: Use the app
+## Step 9. Use the app
 
 Now, when you visit `<host>.mybluemix.net/` you will be able to view the contents of your {{site.data.keyword.composeForRabbitMQ}} collection. As you add words and their definitions they are added to the database and displayed. If you stop and restart the app you'll see any words and definitions you've already added are now listed.
 
@@ -152,7 +152,7 @@ Instead of pushing the app into {{site.data.keyword.cloud_notm}} you can run it 
 7. Save the file as `vcap-local.json` in the directory where the sample app is located.
 
 To avoid accidentally exposing your credentials when pushing an application to Github or {{site.data.keyword.cloud_notm}} you should make sure that the file containing your credentials is listed in the relevant ignore file. If you open `.cfignore` and `.gitignore` in your application directory you'll see that `vcap-local.json` is listed in both, so it won't be included in the files that are uploaded when you push the app to either Github or {{site.data.keyword.cloud_notm}}.
-{: .tip}
+{: tip}
 
 Now start the local server.
 

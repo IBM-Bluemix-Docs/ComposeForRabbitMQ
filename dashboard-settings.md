@@ -26,12 +26,12 @@ If there is a new version of the database available, a drop-down menu appears, a
 
 ## Scale Resources
 
-If your service needs additional memory, or you want to reduce the amount of memory allocated to your service, you can do this by scaling resources.
+If your service needs extra memory, or you want to reduce the amount of memory that is allocated to your service, you can do this by scaling resources.
 
 1. Navigate to your service's dashboard overview page.
-2. In the _Deployment Details_ pane, click **Scale Resources**. The Scale Resouces page opens.
+2. In the _Deployment Details_ pane, click **Scale Resources**. The Scale Resources page opens.
     ![The Scale Resources page](./images/rabbitmq-scale-show.png "The Scale Resources page")
-3. Adjust the slider to raise or lower the memory allocated to the {{site.data.keyword.composeForRabbitMQ}} service. Move the slider to the left to reduce the amount of memory, or move it to the right to increase the memory.
+3. Adjust the slider to raise or lower the memory that is allocated to the {{site.data.keyword.composeForRabbitMQ}} service. Move the slider to the left to reduce the amount of memory, or move it to the right to increase the memory.
 4. Click **Scale Deployment** to trigger the rescaling and return to the dashboard overview. 
 
 When the scaling is complete the _Deployment Details_ pane updates to show the current usage and the new value for the available memory.
@@ -39,9 +39,9 @@ When the scaling is complete the _Deployment Details_ pane updates to show the c
 
 ## Change Password
 
-You may find it necessary to change the password of your service. You can do so using _Update Password_. 
+You might find it necessary to change the password of your service. You can do so by using _Update Password_. 
 
-A new, randomly generated password will appear, or you can type your own password into the field. To regenerate another password, click on the dice to the right of the field. 
+A new, randomly generated password appears, or you can type your own password into the field. To regenerate another password, click the dice to the right of the field. 
   
 ![Updating the RabbitMQ password](./images/rabbitmq-update-password.png "The automatic password generator")
 
@@ -50,10 +50,9 @@ Click **Update Password**. You will be asked to confirm the change. Click **Upda
 **Note:** Changing the password changes the credentials that you and your services use to connect, and invalidates your service's connection string. It can also result in downtime.
 
 ### Updating Connected Applications
-Changing the password will invalidate the existing connection string and generate a new one. This will cause a service interruption until connected applications are updated with the new connection string. You will have to do this by suppling the new connection string to your applications.
+Changing the password invalidates the existing connection string and generate a new one. This will cause a service interruption until connected applications are updated with the new connection string. You will have to do this by suppling the new connection string to your applications.
 
-More information on connecting your applications is in [Connecting an {{site.data.keyword.cloud}} Application](./connecting-bluemix-app.html).
-and [Connecting an external application](./connecting-external.html).
+For more information about connecting your applications, see [Connecting an {{site.data.keyword.cloud}} Application](./connecting-bluemix-app.html) and [Connecting an external application](./connecting-external.html).
 
 
 ## Using Whitelists
