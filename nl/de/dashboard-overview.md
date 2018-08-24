@@ -25,7 +25,7 @@ Die Anzeige _Bereitstellungsdetails_ enthält Details zu Ihrem Service.
 
 Der Datenbanktyp, der vom Service angeboten wird, und die Datenbankversion, die Ihr Service verwendet. Wenn eine neuere Datenbankversion verfügbar ist, wird eine Benachrichtigung zusammen mit einem Link zum Abschnitt [Upgradeversion](/docs/services/ComposeForRabbitMQ/dashboard-settings.html#upgrade-version) Ihres Service-Dashboards angezeigt.
 
-### Name
+### ID
 
 Eine interne ID für den Service.
 
@@ -50,11 +50,6 @@ Alle Compose RabbitMQ-Bereitstellungen akzeptieren ausschließlich sichere TLS-V
 ### Administrator
 
 Der Link auf der Registerkarte **Administrator** öffnet die Seite _RabbitMQ-Verwaltung_. Die Anmeldeinformationen stehen in der **HTTPS**-Verbindungszeichenfolge hinter 'amqps://' und vor '@'.
-
-### SSL-Zertifikat
-
-Ihr Compose-{{site.data.keyword.cloud_notm}}-Service stellt Ihnen ein SSL-Zertifikat bereit, mit dem Sie eine Verbindung zu Ihrer Datenbank herstellen können.
-
 
 ## Instanzverwaltungs-API
 

@@ -25,7 +25,7 @@ Il pannello _Deployment Details_ mostra i dettagli del tuo servizio.
 
 Il tipo di database offerto dal servizio e la versione che il servizio utilizza. Se è disponibile una versione più recente del database, viene visualizzata una notifica, insieme a un link alla sezione [Aggiorna versione](/docs/services/ComposeForRabbitMQ/dashboard-settings.html#upgrade-version) del tuo dashboard del servizio.
 
-### Name
+### ID
 
 Un identificativo interno per il servizio.
 
@@ -50,11 +50,6 @@ Tutte l distribuzioni RabbitMQ accettano solo connessioni protette TLS `amqps://
 ### Gestione
 
 Il link nella scheda **Admin** aprirà la pagina _RabbitMQ Managment_. Le informazioni di accesso sono nella stringa di connessione **HTTPS** che segue 'amqps://' e prima di '@'.
-
-### Certificato SSL
-
-Il tuo servizio Compose {{site.data.keyword.cloud_notm}} ti fornisce un certificato SSL che puoi utilizzare per collegarti al tuo database.
-
 
 ## API di gestione dell'istanza
 

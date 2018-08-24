@@ -25,10 +25,12 @@ Antes de empezar, también puede consultar las [guías de aprendizaje de RabbitM
 ## Node y RabbitMQ
 
 ### Instalación del cliente
+{: #installing-client-node}
 
 Cree el proyecto y luego instale [amqplib](https://www.npmjs.com/package/amqplib) con `npm install amqplib --save`. Con esto instalado puede empezar a crear el código. El paquete amqplib tiene dos API; una de estilo devolución de llamada más tradicional y una de estilo Promise basada en "when". En los ejemplos de este apartado se utiliza la API de devolución de llamada.
 
 ### Creación de la conexión
+{: #creating-connection-node}
 
 Primero se muestra el código completo y luego se desglosa y se explica:
 
@@ -166,10 +168,12 @@ Si ejecuta cualquiera de estos códigos, vaya directamente a [Verificación de l
 ## Java y RabbitMQ
 
 ### Instalación del cliente
+{: #installing-client-java}
 
 Instale el componente [RabbitMQ Java Client](http://www.rabbitmq.com/java-client.html) oficial. Seleccione la opción que se adecúe a su entorno de desarrollo. 
 
 ### Creación de una conexión.
+{: #creating-connection-java}
 
 ```java
 public class RabbitMQConnector {
@@ -268,7 +272,7 @@ Cuando se ejecuta, el código emite un aviso parecido al siguiente:
 W, [2015-11-03T10:45:51.476133 #24628]  WARN -- #<Bunny::Session:0x7fa6319881c0 dj@aws-eu-west-1-portal.1.dblayer.com:11020, vhost=tangy-rabbitmq-80, addresses=[aws-eu-west-1-portal.1.dblayer.com:11020]>: Using TLS but no client certificate is provided! If RabbitMQ is configured to verify peer
 certificate, connection upgrade will fail!
 ```
-El servidor no está configurado para verificar los clientes (y Compose actualmente no ofrece verificación de certificados de cliente); a pesar de este mensaje, la actualización de la conexión se ejecutará correctamente y se verificará con un Lets Encrypt fiable.
+El servidor no está configurado para verificar los clientes (y Compose actualmente no ofrece verificación de certificados de cliente); a pesar de este mensaje, la actualización de la conexión se ejecutará correctamente y se verificará con un certificado de Lets Encrypt fiable.
 
 ## Python y RabbitMQ
 

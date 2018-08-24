@@ -25,10 +25,12 @@ lastupdated: "2017-06-07"
 ## Node と RabbitMQ
 
 ### クライアントのインストール
+{: #installing-client-node}
 
 プロジェクトを作成してから、`npm install amqplib --save` を実行して [amqplib](https://www.npmjs.com/package/amqplib) をインストールします。 インストールが済んだら、コードの作成を開始できます。 amqplib パッケージには 2 つの API があります。従来型のコールバック・スタイルの API と "when" に基づく promise 型のスタイルの API です。 このサンプルではコールバック・スタイルの API を使用します。
 
 ### 接続の作成
+{: #creating-connection-node}
 
 コード全体を最初に示してから、各部分に分割しながら説明を進めていきます。
 
@@ -166,10 +168,12 @@ amqp.connect(rabbitmqurl, { servername: parsedurl.hostname }).then(function(conn
 ## Java と RabbitMQ
 
 ### クライアントのインストール
+{: #installing-client-java}
 
 公式の [RabbitMQ Java Client](http://www.rabbitmq.com/java-client.html) をインストールします。 ご使用の開発環境に適したオプションを選択してください。 
 
 ### 接続の作成
+{: #creating-connection-java}
 
 ```java
 public class RabbitMQConnector {

@@ -19,16 +19,16 @@ Un servizio {{site.data.keyword.composeForRabbitMQ_full}} viene fornito come un 
 
 La configurazione di base include anche i due portali HAProxy. Ognuno dei due portali HAProxy ha 64MB di memoria.
 
-### Costo
 La configurazione del servizio di base a un prezzo fissato. Consulta i tile del catalogo {{site.data.keyword.cloud_notm}} per i prezzi di base nella tua valuta locale. Ad esempio, il prezzo di base in dollari US è $19.50/mese.
 
-## Opzioni di espansione
+## Aumento delle risorse
 Se hai bisogno di ulteriore archiviazione o memoria per il tuo servizio, puoi aumentare le risorse assegnate in un rapporto 1:1 di archiviazione del disco per unità di memoria. L'aumento del disco assegnato alla distribuzione aumenterà anche la RAM assegnata. Un'unità {{site.data.keyword.composeForRabbitMQ}} è composta da 256MB di archiviazione e 256MB di memoria e ogni unità e prezzo per unità _include_ il costo di incremento delle risorse su entrambi i nodi.
 
-### Costo
+## Calcolo del costo della tua distribuzione
+{: #tiered-pricing}
+
 Ogni unità aggiuntiva (256MB di archiviazione/256MB di memoria) ha un prezzo per unità, che viene elencato nella tua valuta corrente nel tile del catalogo {{site.data.keyword.cloud_notm}} per il servizio. In dollari US ogni unità aggiuntiva costa $19.50. Quando la dimensione _totale_ di tutti i tuoi servizi {{site.data.keyword.composeForRabbitMQ}} aumenta, il prezzo per unità diminuisce, come mostrato nella seguente tabella dei prezzi a livelli.
 
-### Prezzi a livelli
 Numero di unità|Prezzo per unità
 ----------|-----------
 1 - 9 unità|prezzo per unità di base -- $19.50 USD/Unità

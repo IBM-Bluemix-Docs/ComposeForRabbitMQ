@@ -25,10 +25,12 @@ Prima di iniziare, potresti anche volere fare riferimento a [RabbitMQ tutorials]
 ## Node e RabbitMQ
 
 ### Installazione del client
+{: #installing-client-node}
 
 Crea il tuo progetto e poi installa [amqplib](https://www.npmjs.com/package/amqplib) con `npm install amqplib --save` . Dopo l'installazione puoi iniziare a creare il codice. Il pacchetto amqplib ha due API; un callback di stile più tradizionale e uno stile promesso basato su "when". L'esempio utilizza l'API di callback.
 
 ### Creazione della connessione
+{: #creating-connection-node}
 
 Viene prima mostrato il codice completo, poi viene spezzato e spiegato:
 
@@ -166,10 +168,12 @@ Se esegui entrambi, ignora [Verifica della connessione di esempio](#section-veri
 ## Java e RabbitMQ
 
 ### Installazione del client
+{: #installing-client-java}
 
 Installa la versione ufficiale di [RabbitMQ Java Client](http://www.rabbitmq.com/java-client.html). Seleziona l'opzione più adatta al tuo ambiente di sviluppo. 
 
 ### Creazione di una connessione.
+{: #creating-connection-java}
 
 ```java
 public class RabbitMQConnector {

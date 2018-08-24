@@ -89,7 +89,7 @@ Per ripristinare un backup in una nuova istanza, segui le istruzioni per visuali
 ### Ripristino tramite la CLI {{site.data.keyword.cloud_notm}}
 
 Utilizza la seguente procedura per ripristinare un backup da un servizio RabbitMQ in esecuzione a un nuovo servizio RabbitMQ utilizzando la CLI {{site.data.keyword.cloud_notm}}. 
-1. Se ne hai bisogno, [scaricala e installala](https://console.bluemix.net/docs/cli/index.html#overview). 
+1. Se ne hai bisogno, [scaricala e installala](https://console.{DomainName}/docs/cli/index.html#overview). 
 2. Trova il backup da cui vuoi eseguire il ripristino nella pagina _Backups_ del tuo servizio e copia il backup_id.  
   **In alternativa**  
   Usa `GET /2016-07/deployments/:id/backups` per trovare un backup e il suo ID tramite la API Compose. L'endpoint fondazione e l'ID istanza di servizio sono entrambi visualizzati nella _Panoramica_ del servizio. Ad esempio: 
@@ -98,15 +98,15 @@ Utilizza la seguente procedura per ripristinare un backup da un servizio RabbitM
   ```  
   La risposta avrà un elenco di tutti i backup disponibili per tale istanza del servizio. Scegli il backup da cui vuoi eseguire il ripristino e copiane l'ID.
 
-3. Accedi con l'account e le credenziali appropriati. `bx login` (oppure `bx login -help` per visualizzare tutte le opzioni di login).
+3. Accedi con l'account e le credenziali appropriati. `ibmcloud login` (oppure `ibmcloud login -help` per visualizzare tutte le opzioni di login).
 
-4. Passa alla tua organizzazione e al tuo spazio: `bx target -o "$YOUR_ORG" -s "YOUR_SPACE"`
+4. Passa alla tua organizzazione e al tuo spazio: `ibmcloud target -o "$YOUR_ORG" -s "YOUR_SPACE"`
 
 5. Usa il comando `service create` per eseguire il provisioning di un nuovo servizio e fornire il servizio di origine e lo specifico backup che stai ripristinando in un oggetto JSON. Ad esempio:
 ``` 
-bx service create SERVICE PLAN SERVICE_INSTANCE_NAME -c '{"source_service_instance_id": "$SERVICE_INSTANCE_ID", "backup_id": "$BACKUP_ID" }'
+ibmcloud service create SERVICE PLAN SERVICE_INSTANCE_NAME -c '{"source_service_instance_id": "$SERVICE_INSTANCE_ID", "backup_id": "$BACKUP_ID" }'
 ```
-  Il campo _SERVICE_ deve essere compose-for-rabbitmq e il campo _PLAN_ deve essere Standard o Enterprise, a seconda del tuo ambiente. _SERVICE\_INSTANCE\_NAME_ è dove inserisci il nome per il tuo nuovo servizio. _source\_service\_instance\_id_ è l'ID dell'istanza di servizio dell'origine del backup; può essere ottenuto eseguendo `bx cf service DISPLAY_NAME --guid`, dove _DISPLAY\_NAME_ è il nome del servizio RabbitMQ da cui proviene il backup. 
+  Il campo _SERVICE_ deve essere compose-for-rabbitmq e il campo _PLAN_ deve essere Standard o Enterprise, a seconda del tuo ambiente. _SERVICE\_INSTANCE\_NAME_ è dove inserisci il nome per il tuo nuovo servizio. _source\_service\_instance\_id_ è l'ID dell'istanza di servizio dell'origine del backup; può essere ottenuto eseguendo `ibmcloud cf service DISPLAY_NAME --guid`, dove _DISPLAY\_NAME_ è il nome del servizio RabbitMQ da cui proviene il backup. 
   
   
 ### Migrazione a una nuova versione
@@ -114,10 +114,10 @@ bx service create SERVICE PLAN SERVICE_INSTANCE_NAME -c '{"source_service_instan
 Alcuni upgrade di versione principale non sono disponibili nella distribuzione in esecuzione attuale. Dovrai eseguire il provisioning di un nuovo servizio che sta eseguendo la versione di cui è stato eseguito l'upgrade e migrare quindi in essa i tuoi dati utilizzando un backup. Questo processo è lo stesso di un ripristino di un backup di cui sopra, con l'unica differenza che specificherai la versione alla quale desideri eseguire l'upgrade.
 
 ``` 
-bx service create SERVICE PLAN SERVICE_INSTANCE_NAME -c '{"source_service_instance_id": "$SERVICE_INSTANCE_ID", "backup_id": ""$BACKUP_ID", "db_version":"$VERSION_NUMBER" }'
+ibmcloud service create SERVICE PLAN SERVICE_INSTANCE_NAME -c '{"source_service_instance_id": "$SERVICE_INSTANCE_ID", "backup_id": ""$BACKUP_ID", "db_version":"$VERSION_NUMBER" }'
 ```
 
 Ad esempio, il ripristino di una versione meno recente di un servizio {{site.data.keyword.composeForRabbitMQ}} a un nuovo servizio che esegue RabbitMQ 3.6.14 sarà simile a:
 ```
-bx service create compose-for-rabbitmq Standard migrated_rabbit -c '{ "source_service_instance_id": "0269e284-dcac-4618-89a7-f79e3f1cea6a", "backup_id":"5a96d8a7e16c090018884566", "db_version":"3.6.14"  }'
+ibmcloud service create compose-for-rabbitmq Standard migrated_rabbit -c '{ "source_service_instance_id": "0269e284-dcac-4618-89a7-f79e3f1cea6a", "backup_id":"5a96d8a7e16c090018884566", "db_version":"3.6.14"  }'
 

@@ -25,7 +25,7 @@ El panel _Detalles de despliegue_ muestra detalles del servicio.
 
 El tipo de base de datos que ofrece el servicio y la versión de la base de datos que utiliza el servicio. Si hay disponible una versión de base de datos más reciente, se mostrará una notificación, junto con un enlace a la sección [Actualizar versión](/docs/services/ComposeForRabbitMQ/dashboard-settings.html#upgrade-version) del panel de control de servicio.
 
-### Nombre
+### ID
 
 Un identificador interno para el servicio.
 
@@ -50,11 +50,6 @@ Todos los despliegues de RabbitMQ Compose aceptan únicamente conexiones seguras
 ### Admin
 
 El enlace del separador **Admin** abrirá la página _Gestión de RabbitMQ_. La información de inicio está en la serie de conexión **HTTPS** entre 'amqps://' y '@'.
-
-### Certificado SSL
-
-El servicio Compose {{site.data.keyword.cloud_notm}} le ofrece un certificado SSL que puede utilizar para conectar con la base de datos.
-
 
 ## API de administración de instancias
 

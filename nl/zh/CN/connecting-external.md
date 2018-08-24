@@ -25,10 +25,12 @@ lastupdated: "2017-06-07"
 ## Node 和 RabbitMQ
 
 ### 安装客户机
+{: #installing-client-node}
 
 创建项目，然后使用 `npm install amqplib --save` 安装 [amqplib](https://www.npmjs.com/package/amqplib)。通过该安装，您可以开始创建代码。amqplib 软件包具有两个 API；更传统的回调样式和基于“when”的约定样式。此处的示例使用回调 API。
 
 ### 创建连接
+{: #creating-connection-node}
 
 首先显示完整的代码，然后进行细分并解释：
 
@@ -166,10 +168,12 @@ amqp.connect(rabbitmqurl, { servername: parsedurl.hostname }).then(function(conn
 ## Java 和 RabbitMQ
 
 ### 安装客户机
+{: #installing-client-java}
 
 安装正式 [RabbitMQ Java 客户机](http://www.rabbitmq.com/java-client.html)。选择适合您的开发环境的选项。 
 
 ### 创建连接
+{: #creating-connection-java}
 
 ```java
 public class RabbitMQConnector {

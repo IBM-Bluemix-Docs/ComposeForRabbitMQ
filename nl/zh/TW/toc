@@ -1,7 +1,7 @@
 {:navgroup: .navgroup}
 {:topicgroup: .topicgroup}
 
-{: .toc subcollection="compose-for-rabbitmq" audience="service" href="/docs/services/ComposeForRabbitMQ/index.html"}
+{: .toc subcollection="compose-for-rabbitmq" audience="service" arm="3663075" href="/docs/services/ComposeForRabbitMQ/index.html"}
 Compose For RabbitMQ
 
 	{: .navgroup id="learn"}
@@ -22,4 +22,11 @@ Compose For RabbitMQ
 	連接至 Compose for RabbitMQ
 		connecting-bluemix-app.md
 		connecting-external.md
+	{: .navgroup-end}
+
+	{: .navgroup id="reference"}
+	reference-versions.md
+	reference-architecture.md
+	reference-connections.md
+	reference-other-offerings.md
 	{: .navgroup-end}

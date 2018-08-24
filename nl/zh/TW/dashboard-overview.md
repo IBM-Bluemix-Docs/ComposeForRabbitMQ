@@ -13,7 +13,7 @@ lastupdated: "2017-11-20"
 
 # 服務概觀
 
-_概觀_ 頁面顯示 {{site.data.keyword.cloud}} Compose 資料庫的相關資訊。概觀包括基本識別資訊及現行資源使用。您也會找到一個區段，以尋找可與工具搭配使用的連線字串，或利用工具來連接至您的資料庫。
+_概觀_ 頁面顯示 {{site.data.keyword.cloud}} Compose 資料庫的相關資訊。概觀包括基本識別資訊及現行資源用量。您也會找到一個連線字串區段，您可以與工具搭配使用，或利用工具來連接至您的資料庫。
 
 ## 部署詳細資料
 
@@ -25,7 +25,7 @@ _部署詳細資料_ 畫面顯示服務的詳細資料。
 
 服務所提供的資料庫類型，以及服務使用的資料庫版本。如果有更新的資料庫版本可用，則會顯示通知，並附有一個鏈結，可讓您前往服務儀表板的[升級版本](/docs/services/ComposeForRabbitMQ/dashboard-settings.html#upgrade-version)區段。
 
-### 名稱
+### ID
 
 服務的內部 ID。
 
@@ -35,7 +35,7 @@ _部署詳細資料_ 畫面顯示服務的詳細資料。
 
 ## 現行工作
 
-對您的服務進行管理變更（例如調整或採取手動備份）會啟動工作。當工作執行時，_現行工作_ 畫面會出現在_概觀_ 頁面上，同時顯示工作名稱及進度列。當工作完成時，_現行工作_ 畫面不再出現在_概觀_ 頁面上。
+對您的服務進行管理變更（例如調整或建立手動備份）會啟動工作。工作在執行時，_現行工作_ 畫面會出現在_概觀_ 頁面上，同時顯示工作名稱及進度列。工作完成之後，_現行工作_ 畫面便不再出現在_概觀_ 頁面上。
 
 ## 連線字串
 
@@ -43,18 +43,13 @@ _部署詳細資料_ 畫面顯示服務的詳細資料。
 
 ### HTTPS
 
-**HTTPS** 連線字串可由某些用戶端程式庫使用，且包含其他程式庫進行連接時所需的一切資訊。您可以在[連接外部應用程式](./connecting-external.html)中，瞭解如何使用連線字串來連接。
+**HTTPS** 連線字串可由某些用戶端程式庫使用，且包含其他程式庫進行連接時所需的一切資訊。您可以在[連接外部應用程式](./connecting-external.html)中，瞭解如何使用連線字串來進行連接。
 
-所有 Compose RabbitMQ 部署只接受以伺服器的自簽憑證支持的 `amqps://` TLS 安全連線。
+所有 Compose RabbitMQ 部署只接受有伺服器自簽憑證支援的 `amqps://` TLS 安全連線。
 
 ### 管理
 
-**管理**標籤上的鏈結將開啟 _RabbitMQ 管理_ 頁面。登入資訊在 **HTTPS** 連線字串中，而此連線字串位於 'amqps://' 後面，但在 '@' 前面。
-
-### SSL 憑證
-
-您的 Compose {{site.data.keyword.cloud_notm}} 服務提供您可用來連接至資料庫的 SSL 憑證。
-
+**管理**標籤上的鏈結將開啟 _RabbitMQ 管理_ 頁面。登入資訊在 **HTTPS** 連線字串中，位於 'amqps://' 之後、'@' 之前。
 
 ## 實例管理 API
 
@@ -66,9 +61,9 @@ _部署詳細資料_ 畫面顯示服務的詳細資料。
 
 ### 部署 ID
 
-大部分呼叫都需要部署 ID，其可識別特定的部署實例。
+大部分呼叫都需要部署 ID，部署 ID 可識別特定的部署實例。
 
-### 參考資訊
+### 參考資料
 
-如需如何在所有 {{site.data.keyword.cloud_notm}} Compose 服務中使用 {{site.data.keyword.cloud_notm}} Compose API 的其他文件及參照，請閱讀 [{{site.data.keyword.cloud_notm}} Compose API](https://www.compose.com/articles/the-ibm-cloud-compose-api/)。
+如需如何在所有 {{site.data.keyword.cloud_notm}} Compose 服務中使用 {{site.data.keyword.cloud_notm}} Compose API 的其他文件及參考資料，請閱讀 [{{site.data.keyword.cloud_notm}} Compose API](https://www.compose.com/articles/the-ibm-cloud-compose-api/)。
 

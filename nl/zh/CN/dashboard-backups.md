@@ -38,7 +38,7 @@ lastupdated: "2018-03-02"
 
 ### 使用 API 查看现有备份
 
-`GET /2016-07/deployments/:id/backups` 端点提供备份列表。将在服务的_概述_中显示基础端点以及服务实例标识和部署标识。例如： 
+`GET /2016-07/deployments/:id/backups` 端点提供了备份列表。这将在服务的_概述_中显示基础端点以及服务实例标识和部署标识。例如： 
 ``` 
 https://composebroker-dashboard-public.mybluemix.net/api/2016-07/instances/$INSTANCE_ID/deployments/$DEPLOYMENT_ID/backups
 ```  
@@ -49,7 +49,7 @@ https://composebroker-dashboard-public.mybluemix.net/api/2016-07/instances/$INST
 
 ### 使用 API 创建备份
 
-向备份端点发送 POST 请求以启动手动备份：`POST /2016-07/deployments/:id/backups`。其将在运行时立即返回诀窍标识以及有关备份的信息。您必须检查备份端点以查看备份是否已完成，并在使用前查找其 backup_id。使用 `GET /2016-07/deployments/:id/backups/`。
+向备份端点发送 POST 请求以启动手动备份：`POST /2016-07/deployments/:id/backups`。该请求在运行时会立即返回诀窍标识以及有关备份的信息。您必须检查备份端点以查看备份是否已完成，并在使用前查找其 backup_id。请使用 `GET /2016-07/deployments/:id/backups/`。
 
 ## 下载备份
 
@@ -57,7 +57,7 @@ https://composebroker-dashboard-public.mybluemix.net/api/2016-07/instances/$INST
 
 ### 使用 API 下载备份
 
-在服务的_备份_页面上查找要从其复原的备份并复制 backup_id，或者使用 `GET /2016-07/deployments/:id/backups` 以通过 Compose API 查找备份及其 backup_id。然后，使用 backup_id 以查找特定备份的信息和下载链接：`GET /2016-07/deployments/:id/backups/:backup_id`。
+在服务的_备份_页面上查找要从其复原的备份并复制 backup_id，或者通过 Compose API 使用 `GET /2016-07/deployments/:id/backups` 来查找备份及其 backup_id。然后，使用 backup_id 来查找特定备份的信息和下载链接：`GET /2016-07/deployments/:id/backups/:backup_id`。
 
 ## 备份内容
 
@@ -89,35 +89,35 @@ curl -i -u guest:guest -H "content-type:application/json" -X POST --data @<path_
 ### 通过 {{site.data.keyword.cloud_notm}} CLI 复原
 
 通过 {{site.data.keyword.cloud_notm}} CLI，使用以下步骤将备份从正在运行的 RabbitMQ 服务复原到新的 RabbitMQ 服务。 
-1. 如果需要，请[下载并安装](https://console.bluemix.net/docs/cli/index.html#overview)。 
+1. 如果需要，请[下载并安装 IBM Cloud CLI](https://console.{DomainName}/docs/cli/index.html#overview)。 
 2. 在服务的_备份_页面上查找要从其复原的备份，然后复制备份标识。  
   **或者**  
-使用 `GET /2016-07/deployments/:id/backups` 以通过 Compose API 查找备份及其标识。将在服务的_概述_中显示基础端点和服务实例标识。例如： 
+通过 Compose API，使用 `GET /2016-07/deployments/:id/backups` 来查找备份及其标识。这将在服务的_概述_中显示基础端点和服务实例标识。例如： 
   ``` 
   https://composebroker-dashboard-public.mybluemix.net/api/2016-07/instances/$INSTANCE_ID/deployments/$DEPLOYMENT_ID/backups
   ```  
 响应将包含该服务实例的所有可用备份的列表。选取要从其复原的备份并复制其标识。
 
-3. 使用相应的帐户和凭证登录。`bx login`（或 `bx login -help` 以查看所有登录选项）。
+3. 使用相应的帐户和凭证登录。`ibmcloud login`（或 `ibmcloud login -help` 以查看所有登录选项）。
 
-4. 切换到您的组织和空间：`bx target -o "$YOUR_ORG" -s "YOUR_SPACE"`
+4. 切换到您的组织和空间：`ibmcloud target -o "$YOUR_ORG" -s "YOUR_SPACE"`
 
-5. 使用 `service create` 命令以供应新服务，并提供在 JSON 对象中复原的源服务和特定备份。例如：
+5. 使用 `service create` 命令以供应新服务，并提供要在 JSON 对象中复原的源服务和特定备份。例如：
 ``` 
-bx service create SERVICE PLAN SERVICE_INSTANCE_NAME -c '{"source_service_instance_id": "$SERVICE_INSTANCE_ID", "backup_id": "$BACKUP_ID" }'
+ibmcloud service create SERVICE PLAN SERVICE_INSTANCE_NAME -c '{"source_service_instance_id": "$SERVICE_INSTANCE_ID", "backup_id": "$BACKUP_ID" }'
 ```
-_SERVICE_ 字段应该为 compose-for-rabbitmq，而 _PLAN_ 字段应该为 Standard 或 Enterprise（取决于环境）。_SERVICE\_INSTANCE\_NAME_ 是放置新服务名称的位置。_source\_service\_instance\_id_ 是备份源的服务实例标识；可通过运行 `bx cf service DISPLAY_NAME --guid` 获取，其中 _DISPLAY\_NAME_ 是备份源自的 RabbitMQ 服务的名称。 
+_SERVICE_ 字段应该为 compose-for-rabbitmq，_PLAN_ 字段应该为 Standard 或 Enterprise（取决于环境）。_SERVICE\_INSTANCE\_NAME_ 是放置新服务的名称的位置。_source\_service\_instance\_id_ 是备份源的服务实例标识；可通过运行 `ibmcloud cf service DISPLAY_NAME --guid` 获取该值，其中 _DISPLAY\_NAME_ 是备份源自的 RabbitMQ 服务的名称。 
   
   
 ### 迁移到新版本
 
-某些主版本升级在当前正在运行的部署中不可用。您将需要供应正在运行升级版本的新服务，然后使用备份迁移数据。此过程与上面的复原备份相同，但将指定要升级到的版本。
+某些主版本升级在当前正在运行的部署中不可用。您将需要供应运行已升级版本的新服务，然后使用备份将数据迁移到其中。此过程与上面的复原备份相同，但将指定要升级到的版本。
 
 ``` 
-bx service create SERVICE PLAN SERVICE_INSTANCE_NAME -c '{"source_service_instance_id": "$SERVICE_INSTANCE_ID", "backup_id": ""$BACKUP_ID", "db_version":"$VERSION_NUMBER" }'
+ibmcloud service create SERVICE PLAN SERVICE_INSTANCE_NAME -c '{"source_service_instance_id": "$SERVICE_INSTANCE_ID", "backup_id": ""$BACKUP_ID", "db_version":"$VERSION_NUMBER" }'
 ```
 
 例如，将较旧版本的 {{site.data.keyword.composeForRabbitMQ}} 服务复原到运行 RabbitMQ 3.6.14 的新服务类似于以下示例：
 ```
-bx service create compose-for-rabbitmq Standard migrated_rabbit -c '{ "source_service_instance_id": "0269e284-dcac-4618-89a7-f79e3f1cea6a", "backup_id":"5a96d8a7e16c090018884566", "db_version":"3.6.14"  }'
+ibmcloud service create compose-for-rabbitmq Standard migrated_rabbit -c '{ "source_service_instance_id": "0269e284-dcac-4618-89a7-f79e3f1cea6a", "backup_id":"5a96d8a7e16c090018884566", "db_version":"3.6.14"  }'
 

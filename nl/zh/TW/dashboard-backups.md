@@ -21,7 +21,7 @@ lastupdated: "2018-03-02"
 每日|每日備份保留 7 日
 每週|每週備份保留 4 週
 每月|每月備份保留 3 個月
-隨需應變|保留一個隨需應變備份。保留的備份一律是最新的隨需應變備份。
+隨需應變|保留一份隨需應變備份。保留的備份一律是最新的隨需應變備份。
 {: caption="表 1. 備份保留排程" caption-side="top"}
 
 備份排程與保留原則是固定的。如果您需要保留的備份數目超過保留排程所容許的數目，則應該根據您的商業需求下載備份及保留保存檔。
@@ -45,11 +45,11 @@ https://composebroker-dashboard-public.mybluemix.net/api/2016-07/instances/$INST
 
 ## 依需求建立備份
 
-除了排程備份外，您也可以手動建立備份。若要建立手動備份，請導覽至服務儀表板的*管理* 頁面，然後按一下*立即備份*。
+除了排定的備份外，您也可以手動建立備份。若要建立手動備份，請導覽至服務儀表板的*管理* 頁面，然後按一下*立即備份*。
 
 ### 使用 API 建立備份
 
-請將 POST 要求傳送至備份端點，以起始手動備份：`POST /2016-07/deployments/:id/backups`。它會立即傳回所執行備份的秘訣 ID 及資訊。您必須檢查備份端點，以查看備份是否已完成，並在使用之前找到其 backup_id。請使用 `GET /2016-07/deployments/:id/backups/`。
+請將 POST 要求傳送至 backups 端點，以起始手動備份：`POST /2016-07/deployments/:id/backups`。它會立即傳回執行中備份的秘訣 ID 及相關資訊。您必須檢查 backups 端點，以查看備份是否已完成，並在使用之前找到其 backup_id。請使用 `GET /2016-07/deployments/:id/backups/`。
 
 ## 下載備份
 
@@ -57,7 +57,7 @@ https://composebroker-dashboard-public.mybluemix.net/api/2016-07/instances/$INST
 
 ### 使用 API 下載備份
 
-在服務的_備份_ 頁面上，尋找您要從中還原的備份，並複製 backup_id，或使用 `GET /2016-07/deployments/:id/backups`，透過 Compose API 尋找備份及其 backup_id。然後，使用 backup_id 來尋找資訊及特定備份的下載鏈結：`GET /2016-07/deployments/:id/backups/:backup_id`。
+在服務的_備份_ 頁面上，尋找您要從中還原的備份，並複製 backup_id，或透過 Compose API 使用 `GET /2016-07/deployments/:id/backups` 尋找備份及其 backup_id。然後，使用 backup_id 來尋找特定備份的資訊及下載鏈結：`GET /2016-07/deployments/:id/backups/:backup_id`。
 
 ## 備份內容
 
@@ -67,7 +67,7 @@ RabbitMQ 備份是分配管理系統 meta 資料的 JSON 表示法。它們是�
 
 您可以使用 {{site.data.keyword.composeForRabbitMQ}} 備份來執行資料庫的本端副本。
 
-您將需要執行 RabbitMQ 的本端實例，此實例的管理外掛程式包括在 RabbitMQ 發行套件中。請使用 `rabbitmq-plugins enable rabbitmq_management` 來啟用它。另外，您將取得：
+您將需要使用 RabbitMQ 發行套件中包含的管理外掛程式，執行 RabbitMQ 的本端實例。請使用 `rabbitmq-plugins enable rabbitmq_management` 來啟用它。您將會額外取得：
 
 * `http://localhost:15672/` 上的管理使用者介面、
 * `http://server-name:15672/api/` 上的 HTTP API，
@@ -89,35 +89,35 @@ curl -i -u guest:guest -H "content-type:application/json" -X POST --data @<path_
 ### 透過 {{site.data.keyword.cloud_notm}} CLI 還原
 
 請使用下列步驟，以使用 {{site.data.keyword.cloud_notm}} CLI 將備份從執行中 RabbitMQ 服務還原至新的 RabbitMQ 服務。 
-1. 如果您需要，請[下載並安裝它](https://console.bluemix.net/docs/cli/index.html#overview)。 
+1. 如果您需要，請[下載並安裝它](https://console.{DomainName}/docs/cli/index.html#overview)。 
 2. 在服務的_備份_ 頁面上，尋找您要從中還原的備份，然後複製備份 ID。  
   **或**  
-  使用 `GET /2016-07/deployments/:id/backups`，透過 Compose API 尋找備份及其 ID。「基礎端點」及服務實例 ID 都會顯示在服務的_概觀_ 中。例如： 
+  透過 Compose API 使用 `GET /2016-07/deployments/:id/backups` 尋找備份及其 ID。「基礎端點」及服務實例 ID 都會顯示在服務的_概觀_ 中。例如： 
   ``` 
   https://composebroker-dashboard-public.mybluemix.net/api/2016-07/instances/$INSTANCE_ID/deployments/$DEPLOYMENT_ID/backups
   ```  
   回應將會有該服務實例之所有可用備份的清單。請挑選您要從中還原的備份，並複製其 ID。
 
-3. 使用適當的帳戶及認證登入。`bx login`（或 `bx login -help` 以查看所有登入選項）。
+3. 使用適當的帳戶及認證登入。`ibmcloud login`（或 `ibmcloud login -help` 以查看所有登入選項）。
 
-4. 切換至「組織」及「空間」：`bx target -o "$YOUR_ORG" -s "YOUR_SPACE"`
+4. 切換至「組織」及「空間」：`ibmcloud target -o "$YOUR_ORG" -s "YOUR_SPACE"`
 
-5. 使用 `service create` 指令來佈建新的服務，並提供您要在 JSON 物件中還原的來源服務及特定備份。例如：
+5. 使用 `service create` 指令來佈建新的服務，並在 JSON 物件中提供您要還原的來源服務及特定備份。例如：
 ``` 
-bx service create SERVICE PLAN SERVICE_INSTANCE_NAME -c '{"source_service_instance_id": "$SERVICE_INSTANCE_ID", "backup_id": "$BACKUP_ID" }'
+ibmcloud service create SERVICE PLAN SERVICE_INSTANCE_NAME -c '{"source_service_instance_id": "$SERVICE_INSTANCE_ID", "backup_id": "$BACKUP_ID" }'
 ```
-  _SERVICE_ 欄位應該是 compose-for-rabbitmq，而 _PLAN_ 欄位應該是 Standard（標準）或 Enterpris（企業），視您的環境而定。_SERVICE\_INSTANCE\_NAME_ 是您將放置新服務名稱的位置。_source\_service\_instance\_id_ 是備份來源的服務實例 ID；其取得方式是執行 `bx cf service DISPLAY_NAME --guid`，其中 _DISPLAY\_NAME_ 是備份來源的 RabbitMQ 服務名稱。 
+  _SERVICE_ 欄位應該是 compose-for-rabbitmq，而 _PLAN_ 欄位應該是 Standard（標準）或 Enterpris（企業），視您的環境而定。_SERVICE\_INSTANCE\_NAME_ 是您將放置新服務名稱的位置。_source\_service\_instance\_id_ 是備份來源的服務實例 ID；其取得方式是執行 `ibmcloud cf service DISPLAY_NAME --guid`，其中 _DISPLAY\_NAME_ 是備份來源的 RabbitMQ 服務名稱。 
   
   
 ### 移轉至新版本
 
-現行執行中部署無法進行部分主要版本升級。您需要佈建將執行已升級版本的新服務，然後使用備份將您的資料移轉至其中。此處理程序與上面的還原備份處理程序相同，但您將指定要升級為的版本。
+現行執行中部署無法進行部分主要版本升級。您將需要佈建執行已升級版本的新服務，然後使用備份將您的資料移轉至其中。此處理程序與上面的還原備份處理程序相同，但您將指定要升級到的版本。
 
 ``` 
-bx service create SERVICE PLAN SERVICE_INSTANCE_NAME -c '{"source_service_instance_id": "$SERVICE_INSTANCE_ID", "backup_id": ""$BACKUP_ID", "db_version":"$VERSION_NUMBER" }'
+ibmcloud service create SERVICE PLAN SERVICE_INSTANCE_NAME -c '{"source_service_instance_id": "$SERVICE_INSTANCE_ID", "backup_id": ""$BACKUP_ID", "db_version":"$VERSION_NUMBER" }'
 ```
 
-例如，將舊版的 {{site.data.keyword.composeForRabbitMQ}} 服務還原為執行 RabbitMQ 3.6.14 的新服務如下所示：
+例如，將舊版的 {{site.data.keyword.composeForRabbitMQ}} 服務還原至執行 RabbitMQ 3.6.14 的新服務，將類似如下：
 ```
-bx service create compose-for-rabbitmq Standard migrated_rabbit -c '{ "source_service_instance_id": "0269e284-dcac-4618-89a7-f79e3f1cea6a", "backup_id":"5a96d8a7e16c090018884566", "db_version":"3.6.14"  }'
+ibmcloud service create compose-for-rabbitmq Standard migrated_rabbit -c '{ "source_service_instance_id": "0269e284-dcac-4618-89a7-f79e3f1cea6a", "backup_id":"5a96d8a7e16c090018884566", "db_version":"3.6.14"  }'
 

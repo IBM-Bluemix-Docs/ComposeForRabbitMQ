@@ -25,10 +25,12 @@ Avant de commencer, vous voudrez sans doute également consulter les [tutoriels 
 ## Node et RabbitMQ
 
 ### Installation du client
+{: #installing-client-node}
 
 Créez votre projet puis installez [amqplib](https://www.npmjs.com/package/amqplib) avec `npm install amqplib --save`. Une fois cette installation effectuée, vous pouvez commencer à créer le code. Le package amqplib a deux API ; le style le plus traditionnel de rappel et le style engagements basé sur "when". L'exemple donné ici utilise l'API de rappel.
 
 ### Création de la connexion
+{: #creating-connection-node}
 
 Le code complet est présenté en premier, puis par fractions et expliqué :
 
@@ -166,10 +168,12 @@ Si vous rencontrez l'une de ces cas, passez directement à [Vérification de l'e
 ## Java et RabbitMQ
 
 ### Installation du client
+{: #installing-client-java}
 
 Installez le [client Java RabbitMQ](http://www.rabbitmq.com/java-client.html) officiel. Sélectionnez l'option la mieux adaptée à votre environnement de développement. 
 
 ### Création d'une connexion
+{: #creating-connection-java}
 
 ```java
 public class RabbitMQConnector {

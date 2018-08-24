@@ -25,7 +25,7 @@ Le panneau _Deployment Details_ affiche des détails concernant votre déploieme
 
 Type de base de données fourni par le service et version de base de données qu'utilise votre service. Lorsqu'une version plus récente de la base de données est disponible, une notification s'affiche, accompagnée d'un lien vers la section [Mise à niveau de la version](/docs/services/ComposeForRabbitMQ/dashboard-settings.html#upgrade-version) du tableau de bord de votre service.
 
-### Nom
+### ID
 
 Identificateur interne du service.
 
@@ -50,11 +50,6 @@ Tous les déploiements Compose RabbitMQ acceptent uniquement les connexions séc
 ### Admin
 
 Le lien de l'onglet **Admin** permet d'ouvrir la page de _gestion de RabbitMQ_. Les informations de connexion se trouvent dans la chaîne de connexion **HTTPS**, après 'amqps://' et avant '@'.
-
-### Certificat SSL
-
-Le service Compose {{site.data.keyword.cloud_notm}} vous fournit un certificat SSL qui vous permet de vous connecter à votre base de données.
-
 
 ## API d'administration d'instance
 

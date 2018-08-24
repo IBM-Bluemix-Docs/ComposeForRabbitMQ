@@ -25,10 +25,12 @@ lastupdated: "2017-06-07"
 ## Node 및 RabbitMQ
 
 ### 클라이언트 설치
+{: #installing-client-node}
 
 프로젝트를 작성한 후 `npm install amqplib --save`를 사용하여 [amqplib](https://www.npmjs.com/package/amqplib)를 설치하십시오. 설치가 되면 코드 작성을 시작할 수 있습니다. amqplib 패키지에는 두 개의 API, 즉 더 전통적인 콜백 스타일과 "when" 기반 프라미스 스타일이 있습니다. 여기에 나오는 예제에서는 콜백 API를 사용합니다.
 
 ### 연결 작성
+{: #creating-connection-node}
 
 전체 코드가 먼저 표시된 후 분석되고 설명됩니다.
 
@@ -166,10 +168,12 @@ amqp.connect(rabbitmqurl, { servername: parsedurl.hostname }).then(function(conn
 ## Java 및 RabbitMQ
 
 ### 클라이언트 설치
+{: #installing-client-java}
 
 공식 [RabbitMQ Java 클라이언트](http://www.rabbitmq.com/java-client.html)를 설치하십시오. 사용자의 개발 환경에 적합한 옵션을 선택하십시오. 
 
 ### 연결 작성
+{: #creating-connection-java}
 
 ```java
 public class RabbitMQConnector {

@@ -25,7 +25,7 @@ O painel _Detalhes da implementação_ mostra detalhes de seu serviço.
 
 O tipo de banco de dados que é oferecido pelo serviço e a versão do banco de dados que seu serviço usa. Se uma versão de banco de dados mais recente estiver disponível, uma notificação será exibida, junto a um link para a seção [Fazer upgrade da versão](/docs/services/ComposeForRabbitMQ/dashboard-settings.html#upgrade-version) de seu painel de serviço.
 
-### Nome
+### ID
 
 Um identificador interno para o serviço.
 
@@ -50,11 +50,6 @@ Todas as implementações do Compose RabbitMQ aceitam somente conexões seguras 
 ### Administrador
 
 O link na guia **Administrador** abrirá a página _Gerenciamento do RabbitMQ_. As informações de login estão na sequência de conexões **HTTPS** após 'amqps://' e antes do '@'.
-
-### Certificado SSL
-
-Seu serviço Compose {{site.data.keyword.cloud_notm}} fornece um certificado SSL que é possível usar para conectar-se a seu banco de dados.
-
 
 ## API de administração de instância
 

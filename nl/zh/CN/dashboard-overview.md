@@ -25,7 +25,7 @@ _部署详细信息_面板显示服务的详细信息。
 
 服务所提供的数据库类型，以及服务所使用的数据库版本。如果有更新的数据库版本可用，那么会显示通知以及指向服务仪表板中[升级版本](/docs/services/ComposeForRabbitMQ/dashboard-settings.html#upgrade-version)部分的链接。
 
-### 名称
+### 标识
 
 服务的内部标识。
 
@@ -50,11 +50,6 @@ _部署详细信息_面板显示服务的详细信息。
 ### 管理
 
 **管理**选项卡上的链接将打开 _RabbitMQ 管理_页面。登录信息位于 **HTTPS** 连接字符串中，在“amqps://”之后，“@”之前。
-
-### SSL 证书
-
-您的 Compose {{site.data.keyword.cloud_notm}} 服务为您提供了可用于连接到数据库的 SSL 证书。
-
 
 ## 实例管理 API
 

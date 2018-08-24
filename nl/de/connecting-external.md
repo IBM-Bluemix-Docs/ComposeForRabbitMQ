@@ -25,10 +25,12 @@ Bevor Sie anfangen, sollten Sie auch einen Blick auf die [RabbitMQ-Lernprogramme
 ## Node und RabbitMQ
 
 ### Client installieren
+{: #installing-client-node}
 
 Erstellen Sie Ihr Projekt und installieren Sie dann [amqplib](https://www.npmjs.com/package/amqplib) mit `npm install amqplib --save`. Nach dieser Installation können Sie an die Erstellung des Codes gehen. Das Paket 'amqplib' hat zwei APIs: den traditionelleren Callback-Stil und einen "when"-basierten Promise-Stil. Im vorliegenden Beispiel wird die Callback-API verwendet.
 
 ### Verbindung erstellen
+{: #creating-connection-node}
 
 Zuerst wird der Code komplett gezeigt, danach unterteilt und erläutert:
 
@@ -166,10 +168,12 @@ Wenn Sie eine dieser beiden Varianten ausführen, springen Sie weiter zum Abschn
 ## Java und RabbitMQ
 
 ### Client installieren
+{: #installing-client-java}
 
 Installieren Sie den offiziellen [RabbitMQ-Java-Client](http://www.rabbitmq.com/java-client.html). Wählen Sie die Option aus, die für Ihre Entwicklungsumgebung passt. 
 
 ### Verbindung erstellen
+{: #creating-connection-java}
 
 ```java
 public class RabbitMQConnector {
