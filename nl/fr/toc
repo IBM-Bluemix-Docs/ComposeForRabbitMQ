@@ -1,7 +1,7 @@
 {:navgroup: .navgroup}
 {:topicgroup: .topicgroup}
 
-{: .toc subcollection="compose-for-rabbitmq" audience="service" arm="3663075" href="/docs/services/ComposeForRabbitMQ/index.html"}
+{: .toc subcollection="compose-for-rabbitmq" audience="service" arm="3663075" href="/docs/services/ComposeForRabbitMQ/index.html" path="services/ComposeForRabbitMQ"}
 Compose For RabbitMQ
 
 	{: .navgroup id="learn"}
