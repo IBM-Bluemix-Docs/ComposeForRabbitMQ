@@ -12,7 +12,7 @@ lastupdated: "2017-06-07"
 {:pre: .pre}
 
 # Connecting an external application
-{: #connecting-external-app}
+{: #external-app}
 
 You can find the information that you need to connect to {{site.data.keyword.composeForRabbitMQ_full}} on the *Overview* page of your {{site.data.keyword.composeForRabbitMQ}} service.
 

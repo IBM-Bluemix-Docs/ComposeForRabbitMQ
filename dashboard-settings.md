@@ -13,6 +13,7 @@ lastupdated: "2017-11-20"
 {:tip: .tip}
 
 # Settings
+{: #dashboard-settings}
 
 These features allow you to adapt your {{site.data.keyword.composeForRabbitMQ_full}} service to better suit your needs and requirements.
 
@@ -52,7 +53,7 @@ Click **Update Password**. You will be asked to confirm the change. Click **Upda
 ### Updating Connected Applications
 Changing the password invalidates the existing connection string and generate a new one. This will cause a service interruption until connected applications are updated with the new connection string. You will have to do this by suppling the new connection string to your applications.
 
-For more information about connecting your applications, see [Connecting an {{site.data.keyword.cloud}} Application](./connecting-bluemix-app.html) and [Connecting an external application](./connecting-external.html).
+For more information about connecting your applications, see [Connecting an {{site.data.keyword.cloud}} Application](/docs/services/ComposeForRabbitMQ?topic=compose-for-rabbitmq-ibmcloud-cf-app) and [Connecting an external application](/docs/services/ComposeForRabbitMQ?topic=compose-for-rabbitmq-external-app).
 
 
 ## Using Whitelists

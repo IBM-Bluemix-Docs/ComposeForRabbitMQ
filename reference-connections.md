@@ -11,8 +11,8 @@ lastupdated: "2018-06-13"
 {:pre: .pre}
 {:tip: .tip}
 
-# Connection Configuration
-{: #connection-configuration}
+# Connection Architecture
+{: #connection-architecture}
 
 {{site.data.keyword.composeForRabbitMQ_full}} database connections are managed by 2 HAProxy portals. Each portal has 64 MB of memory. The two portals to allow for applications to maintain connectivity should one of the portals become unreachable.
 

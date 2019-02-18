@@ -22,7 +22,7 @@ For more database-related information, see the [Compose Articles](https://www.co
 
 ## {{site.data.keyword.cloud_notm}} Enterprise
 
-This is a service that provides a private, dedicated, and isolated cluster for customers. To use this plan, a {{site.data.keyword.composeEnterprise}} cluster must be provisioned through the {{site.data.keyword.composeEnterprise_full_notm}} service in the [IBM Cloud catalog](https://{DomainName}.net/catalog/).
+This is a service that provides a private, dedicated, and isolated cluster for customers. To use this plan, a {{site.data.keyword.composeEnterprise}} cluster must be provisioned through the {{site.data.keyword.composeEnterprise_full_notm}} service in the [IBM Cloud catalog](https://{DomainName}/catalog/).
 
 Once you have a {{site.data.keyword.composeEnterprise}} cluster, selecting the {{site.data.keyword.composeForRabbitMQ}} service with the Enterprise plan provisions the service onto your dedicated cluster. 
 

@@ -12,7 +12,7 @@ lastupdated: "2018-03-27"
 {:pre: .pre}
 
 # About {{site.data.keyword.composeForRabbitMQ}}
-{: #about-compose-for-rabbitmq}
+{: #about}
 
 RabbitMQ asynchronously handles the messages between your applications and databases, enabling the separation of the data and application layers. RabbitMQ enables developers to route, track, and queue messages with customizable persistence levels, delivery settings, and confirmed publication. By using {{site.data.keyword.composeForRabbitMQ_full}}, you get access to the easy-to-use administrative interface with a host of management features such as deployment monitoring, click-of-a-button scaling, user setup, and log file access.
 {:shortdesc}
@@ -35,9 +35,9 @@ You can manage your service from the service dashboard. Here you can find inform
 - change the service password
 - use whitelists to restrict access to your databases. 
 
-For more information, see [Settings](./dashboard-settings.html).
+For more information, see [Settings](/docs/services/ComposeForRabbitMQ?topic=compose-for-rabbitmq-dashboard-settings).
 
-{{site.data.keyword.composeForRabbitMQ}} relies on Cloud Foundry roles to manage access to the service. Only users with the Developer role can see or use the service dashboard. For more information on Cloud Foundry roles, see the [Cloud Foundry access](https://{DomainName}/docs/iam/cfaccess.html#cfaccess) and the [Managing Cloud Foundry access](https://{DomainName}/docs/iam/mngcf.html#mngcf) pages.
+{{site.data.keyword.composeForRabbitMQ}} relies on Cloud Foundry roles to manage access to the service. Only users with the Developer role can see or use the service dashboard. For more information on Cloud Foundry roles, see the [Cloud Foundry access](/docs/iam?topic=iam-cfaccess) and the [Managing Cloud Foundry access](/docs/iam?topic=iam-mngcf) pages.
 {: tip}
 
 ## Connecting to {{site.data.keyword.composeForRabbitMQ}}
@@ -46,8 +46,8 @@ You can connect to your service using the credentials that are created along wit
 
 ## Connecting an {{site.data.keyword.cloud_notm}} application to {{site.data.keyword.composeForRabbitMQ}}
 
-To connect an {{site.data.keyword.cloud_notm}} application to your service, use the credentials that are created along with the service. You can find information on how to connect an {{site.data.keyword.cloud_notm}} application to a {{site.data.keyword.composeForRabbitMQ}} service in [Connecting an {{site.data.keyword.cloud_notm}} Application](./connecting-bluemix-app.html).
+To connect an {{site.data.keyword.cloud_notm}} application to your service, use the credentials that are created along with the service. You can find information on how to connect an {{site.data.keyword.cloud_notm}} application to a {{site.data.keyword.composeForRabbitMQ}} service in [Connecting an {{site.data.keyword.cloud_notm}} Application](/docs/services/ComposeForRabbitMQ?topic=compose-for-rabbitmq-ibmcloud-cf-app).
 
 ## Connecting to {{site.data.keyword.composeForRabbitMQ}} from outside {{site.data.keyword.cloud_notm}}
 
-If you want to connect to {{site.data.keyword.composeForRabbitMQ}} from outside {{site.data.keyword.cloud_notm}}, you can use the provided connection strings or command line. You can find information on how to connect in [Connecting an external application](./connecting-external.html).
+If you want to connect to {{site.data.keyword.composeForRabbitMQ}} from outside {{site.data.keyword.cloud_notm}}, you can use the provided connection strings or command line. You can find information on how to connect in [Connecting an external application](/docs/services/ComposeForRabbitMQ?topic=compose-for-rabbitmq-connecting-external).

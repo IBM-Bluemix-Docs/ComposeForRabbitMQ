@@ -13,9 +13,10 @@ lastupdated: "2017-10-23"
 {:tip: .tip}
 
 # Data Browser
+{: #data-browser}
 
 The {{site.data.keyword.composeForRabbitMQ_full}} service comes with access to the management UI provided by the RabbitMQ [Management plug-in](https://www.rabbitmq.com/management.html).
 
-Click _Data Browser_ to open a login screen in a new tab. You can find your login credentials in your service's connection string. The user and password values are in the section of the string afterß `amqps://` and before `@`, in the format `user:password`.
+Click _Data Browser_ to open a login screen in a new tab. You can find your login credentials in your service's connection string. The user and password values are in the section of the string after `amqps://` and before `@`, in the format `user:password`.
 
 After you log in to the UI you can manage exchanges, queues, bindings, virtual hosts, users, and permissions. 
