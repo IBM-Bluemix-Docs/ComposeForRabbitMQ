@@ -3,6 +3,9 @@
 Copyright:
   years: 2017,2018
 lastupdated: "2017-10-23"
+
+subcollection: compose-for-rabbitmq
+
 ---
 
 {:new_window: target="_blank"}
