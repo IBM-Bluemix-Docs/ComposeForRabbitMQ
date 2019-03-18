@@ -18,7 +18,7 @@ lastupdated: "2018-06-13"
 
 Deployable Versions| Preferred Version
 ----------|-----------
-3.6.14, 3.7.5 | 3.7.5
+3.6.14, 3.7.9 | 3.7.9
 {: caption="Table 1. RabbitMQ versions" caption-side="top"}
 
 ## Preferred Version
