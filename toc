@@ -14,6 +14,7 @@ Compose For RabbitMQ
 		dashboard-overview.md
 		dashboard-backups.md
 		dashboard-settings.md
+		dashboard-metrics.md
 		data-browser.md
 	{: .navgroup-end}
 
@@ -25,6 +26,7 @@ Compose For RabbitMQ
 	{: .navgroup-end}
 
 	{: .navgroup id="reference"}
+	[The IBM Cloud Compose API](https://www.compose.com/articles/the-ibm-cloud-compose-api)
 	reference-versions.md
 	reference-architecture.md
 	reference-connections.md
