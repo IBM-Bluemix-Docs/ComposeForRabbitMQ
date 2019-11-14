@@ -20,7 +20,7 @@ subcollection: compose-for-rabbitmq
 # Metrics
 {: #metrics}
 
-Each {{site.data.keyword.composeRabbitMQ_full}} deployment has a _Metrics_ tab which displays information about how each capsule of the deployment is behaving. The graphs are interactive. You can scan through the chart for particular numbers at a point in time, or you can set the view to a range of time periods from the last 30 minutes to the last seven days.
+Each {{site.data.keyword.composeForRabbitMQ_full}} deployment has a _Metrics_ tab which displays information about how each capsule of the deployment is behaving. The graphs are interactive. You can scan through the chart for particular numbers at a point in time, or you can set the view to a range of time periods from the last 30 minutes to the last seven days.
 
 There are graphs for data members and the HAProxy portals on a deployment. Each graph has a name in the upper-left with the specific capsule it describes. 
 

@@ -286,7 +286,7 @@ The server is not configured to verify clients (and Compose doesn't currently of
 
 ## Python and RabbitMQ
 
-This code uses the [pika](http://pika.readthedocs.org/en/0.10.0/index.html) library, as recommended by the RabbitMQ developers.
+This code uses the [pika](https://pika.readthedocs.io/en/stable/) library, as recommended by the RabbitMQ developers.
 ```python
 #!/usr/bin/env python
 import pika
