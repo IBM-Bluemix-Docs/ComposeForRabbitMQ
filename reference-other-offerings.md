@@ -15,9 +15,13 @@ subcollection: compose-for-rabbitmq
 {:codeblock: .codeblock}
 {:pre: .pre}
 {:tip: .tip}
+{:important: .important}
 
 # Other Offerings
 {: #other-offerings}
+
+{{site.data.keyword.composeForRabbitMQ_full}} is no longer the latest service offering. The next generation is [{{site.data.keyword.messages-for-rabbitmq_full}}](/docs/messages-for-rabbitmq?topic=messages-for-rabbitmq-getting-started).
+{: .important}
 
 {{site.data.keyword.composeForRabbitMQ_full}} has been developed from the Compose platform for production-ready, autoscaling, highly available databases. Compose continues to operate as part of IBM from [https://www.compose.com/](https://www.compose.com). In addition to the documentation available on {{site.data.keyword.cloud_notm}}, Compose documentation is available at [https://help.compose.com/](https://help.compose.com/).
 
@@ -31,4 +35,4 @@ This is a service that provides a private, dedicated, and isolated cluster for c
 
 Once you have a {{site.data.keyword.composeEnterprise}} cluster, selecting the {{site.data.keyword.composeForRabbitMQ}} service with the Enterprise plan provisions the service onto your dedicated cluster. 
 
-For more information, see the [{{site.data.keyword.composeEnterprise}} catalog page](https://{DomainName}/catalog/services/compose-enterprise) and the [{{site.data.keyword.composeEnterprise}} documentation](https://{DomainName}/docs/services/ComposeEnterprise/index.html#about-compose-enterprise).
+For more information, see the [{{site.data.keyword.composeEnterprise}} catalog page](https://{DomainName}/catalog/compose-enterprise) and the [{{site.data.keyword.composeEnterprise}} documentation](https://{DomainName}/docs/ComposeEnterprise/index.html#about-compose-enterprise).
