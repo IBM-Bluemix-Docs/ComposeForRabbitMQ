@@ -6,7 +6,7 @@ lastupdated: "2018-03-02"
 
 keywords: rabbitmq, compose
 
-subcollection: compose-for-rabbitmq
+subcollection: ComposeForRabbitMQ
 
 ---
 
