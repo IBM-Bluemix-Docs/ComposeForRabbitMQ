@@ -41,7 +41,7 @@ You can manage your service from the service dashboard. Here you can find inform
 - manage your backups 
 - allocate more resources for your service 
 - change the service password
-- use whitelists to restrict access to your databases. 
+- use allowlists to restrict access to your databases. 
 
 For more information, see [Settings](/docs/ComposeForRabbitMQ?topic=ComposeForRabbitMQ-dashboard-settings).
 
